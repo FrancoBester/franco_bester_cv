@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" s>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height ">
+    <title>Document</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="topnav" id="navigation_bar">
+        <a class="active" href="#About" onclick="showDiv('About')">About</a>
+        <a href="#Experience" onclick="showDiv('Experience')">Work exrience</a>
+        <a href="#Langauge" onclick="showDiv('Langauge')">Languages</a>
+        <a href="#Links" onclick="showDiv('Links')">Links</a>
+        <a href="#References" onclick="showDiv('References')">Refrences</a>
+        <a href="#Downloads" onclick="showDiv('Downloads')">Download</a>
+    </div>
+
+    <!-- Javascript links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script  src="OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="API.js"></script>
+    
+    <!-- About page HTML -->
+    <div id="About" class="hide_section" style="visibility: hidden;"> 
+        <!-- Button used to call javascript function which creates 3d object again and hides html  -->
+        <button onclick="hideDiv('About')" class="back_button" id="About_btn"><p class="span_button">Home page</p></button>
+        About me
+        <div class="paragraph" style="--height: 47rem">
+            <section style="float: inline-start;margin-right: 1rem;">
+                <img src="./Profil_1.jpg" class="me"/>
+                <section style="background-color: #949494;">
+                    <p style="font-size: 3rem;font-weight: bolder;color:#000fff; margin-bottom: 0.5rem;">Contact info</p>
+                    <p style="font-size: 1.4rem; margin-top: 0.3rem;">Name: Franco Bester</p>
+                    <p style="font-size: 1.4rem;">Email: 
+                        <a href="#About" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=francobester17@gmail.com')">francobester17@gmail.com</a>
+                    </p>
+                    <p style="font-size: 1.4rem;">Cell: +27 78 002 3227</p>
+                </section>
+            </section>
+
+            <section style="float: inline-start;width: 80%; background-color:  #ffffff ;">
+                <p class="About_text"> My name is Franco Bester, I am a sotfware developer currently completing my final year in Information Technologies at NWU Vaal.</p>
+                <p class="About_text"> For the last 6 years I have been doing programming either in high school or at university, technology has always been interesting to me 
+                    and I have developed a great passion and interesset in all things related to Information Technology. </p> 
+                <p class="About_text">I am a computer, software enthusiast with a great instrest and appaite for new technologies and innovations in my field.</p> 
+                <p class="About_text">50% of my spare time is spend doing research on new and upcomming technological products and services while
+                    30% is spend developing and improving my software development skills and the last
+                    20% is set aside to allow myself to relax and enjoy the other parts of life. 
+                </p>
+                   
+                <p></p>
+
+                <p class="About_text">I am a great team player, I am a very cooperative person who does not have a problem receiving orders from others along with being able to assume a leadership role if the sistution calls for it.</p>
+                <p class="About_text">While I am a strong advidcite for teamwork I don't have a problem working on my own and taking full responsiblity for all my mistakes and sortcomings</p>
+                <p class="About_text">Planning and scheduling has always been one of my top priorities when starting any new project and because of this my planning and scheduling abilties have grown to be own of my strongest skills  </p>
+                <p class="About_text">I am a very hard worker and always put 100% of my energy into everything that I do</p>
+                <p class="About_text">My strongest personal trait is that I form strong bonds with those close to me and that I have always cared alot about my family and friends and value them the most in life</p>   
+
+            </section>
+        </div>
+    </div>
+    
+    <!-- Experience -->
+    <div id="Experience" class="hide_section" style="visibility: hidden;">
+        <button onclick="hideDiv('Experience')" class="back_button" id="Experience_btn"><p class="span_button">Home page</p></button>
+        Past work experience
+        <div class="paragraph" style="--height: 47rem">
+            <section style="float: inline-end;">
+                <a href="#" onclick="window.open('./Franco_Bester_SI_diploma.pdf'); return false;">
+                    <img src="./SI.png" class="SI_img">
+                </a>
+            </section>
+
+            <section style="background-color: #ffffff; width: 80%; padding: 1rem;">
+                <p class="experience_text">For the past 2 years I have been working a the North-West University Vaal campus in Vanderbijlpark ( 
+                    <a href="#Experience" onclick="open_new_window('www.nwu.ac.za/welcome')">NWU)</a> 
+                </p>
+                <p class="experience_text">In 2018 I was employed at the NWU Vaal campus as a Supplemental Instructor(SI) for the user interface programming at first year module, to become an SI a student needs to attend and pass a
+                    interdicoty course. Once this course has been passed a student receives a diploma and is allowed to be employeed as a Supplemental Instructor
+                </p>
+                <p class="experience_text">As a SI a student is required to attend and assist students in their contact/theoretical classes along with providing and creating additional assignments/classes and explanations</p>
+
+                <p class="experience_text">2019 I transitioned from being a SI to be a Student Assistant(
+                    <a href="#Experience" onclick="open_new_window('services.nwu.ac.za/ctl/supplemental-instruction')">read more</a>
+                ), both positions are very similiar with the main difference being that as a student assistant you are required to mark student test and assignment instead of providing additional learning opportunities for students</p>
+                <p class="experience_text">In 2019 I assistant multiple modules: </p>
+                <p class="experience_text">second year - object oriented programming & apps/advanced user interface programming</p>
+                <p class="experience_text">first year -  structured programming & user interface programming </p>
+                <p class="experience_text">All my past work experienced required that I was able to work well with other people(students), be to able to work well in a team and be a valuable/reliable person on who the rest of my team could place their trust in</p>
+                <p class="experience_text">My past jobs also required that I had good communction and explanation skills to beter understand and assist students with their problems</p>
+                <p class="experience_text">I also participated as a adjudicator in the past 2 GeeXpo's(
+                    <a href="#Experience" onclick="open_new_window('natural-sciences.nwu.ac.za/geexpo')">read more</a>) where I along with other NWU employes marked and assessed highschool yearly IT projects
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Langauge -->
+    <div id="Langauge" class="hide_section" style="visibility: hidden;">
+        <button onclick="hideDiv('Langauge')" class="back_button" id="Langauge_btn"><p class="span_button">Home page</p></button>
+        Programming langauges
+        <div class="paragraph" style="--height: 65rem" id="lang_skils">
+            <section style="float: left; width: 40%;">
+                <p class="langauge_text" style="width: 100%;">For the past 6 years I have been improving and expading my programming knowledge while also learning new langauges every change I get.</p>
+                <p class="langauge_text">I have a greater interest in back-end development but I am also passion for front-end development and providing the user with both a great user interface and expereince.</p>
+                <p class="langauge_text" style="width: 70%">I am very experienced working with SQL based databases, I haved used multiple different DBMS like MYSQL, Oracle and MS Access.</p>
+            </section>
+
+            <div class="bar_position" style="--top_position: 10rem;--right_position:47rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">C# - 9/10</p>
+                <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+            </div>
+
+            <div class="bar_position" style="--top_position: 19rem;--right_position:31rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">SQL - 8/10</p>
+                <div id="bar_border" style="--percent: 80%"><div class="bar_fill"></div></div> 
+            </div>
+
+            <div class="bar_position" style="--top_position: 19rem;--right_position:61rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">Python - 8/10</p>
+                <div id="bar_border" style="--percent: 80%" ><div class="bar_fill"></div></div>
+            </div>
+
+            <div class="bar_position" style="--top_position: 29rem;--right_position:81rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading"> JavaScript - 7/10</p>
+                <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
+            </div> 
+
+            <div class="bar_position" style="--top_position: 29rem;--right_position:46rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">C++ - 7/10</p>
+                <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
+            </div>
+
+            <div class="bar_position" style="--top_position: 29rem;--right_position:11rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">Java - 7/10</p>
+                <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
+            </div>
+
+            <div class="bar_position" style="--top_position: 39rem;--right_position:46rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">Delphi - 6/10</p>
+                <div id="bar_border" style="--percent: 60%"><div class="bar_fill"></div></div>
+            </div>
+
+            <div class="bar_position" style="--top_position: 49rem;--right_position:31rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">HTML - 5/10</p>
+                <div id="bar_border" style="--percent: 50%"><div class="bar_fill"></div></div>
+            </div>
+
+            <div class="bar_position" style="--top_position: 49rem;--right_position:61rem;--bar_width:25rem;--bar_height:3rem;">
+                <p class="bar_heading">CSS - 5/10</p>
+                <div id="bar_border" style="--percent: 50%"><div class="bar_fill"></div></div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- References -->
+    <div id="References" class="hide_section" style="visibility: hidden;">
+        <button onclick="hideDiv('References')" class="back_button" id="References_btn"><p class="span_button">Home page</p></button>
+        References
+        <div class="paragraph" style="--height: 47rem">
+            <div style="float: left;" class="reference_div">
+                <p>
+                    <img src="./Sune.jpg" class="reference">
+                </p>
+                <p class="reference_text">Name: Dr. Sune van der Linde</p>
+                <p class="reference_text">Job title: Lecturer</p>
+                <p class="reference_text">Email info:  
+                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Sune.vanderlinde@nwu.ac.za')">Sune.vanderlinde@nwu.ac.za</a>
+                </p>
+                <p class="reference_text">Cell info: +27 16 910 3258</p>
+                <p class="reference_text">Modules:</p>
+                <p class="reference_text">User Interface Programming</p>
+                <p class="reference_text">Apps and Advanced User Interface Programming</p>
+            </div>
+
+            <div style="float: right;" class="reference_div">
+                <p>
+                    <img src="./Zeeman.jpg" class="reference">
+                </p>
+                <p class="reference_text">Name: Ms Malie Zeeman</p>
+                <p class="reference_text">Job title: Lecturer</p>
+                <p class="reference_text">Email info:  
+                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Malie.Zeeman@nwu.acs.za')">Malie.Zeeman@nwu.ac.za</a>
+                </p>
+                <p class="reference_text">Cell info: +27 16 910 3266</p>
+                <p class="reference_text">Modules:</p>
+                <p class="reference_text">Structured Programming</p>
+                <p class="reference_text">Object Oriented Programming</p>
+            </div>  
+
+            <div class="reference_div">
+                <p>
+                    <img src="./Luke.jpg" class="reference">
+                </p>
+                <p class="reference_text">Name: Mr Luke Coetzee</p>
+                <p class="reference_text">Job title: Assitant lecturer</p>
+                <p class="reference_text">Email info:  
+                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Luke.Coetzee@nwu.ac.za')">Luke.Coetzee@nwu.ac.za</a>
+                </p>
+                <p class="reference_text">Cell info: +27 82 469 6996</p>
+                <p class="reference_text">Modules:</p>
+                <p class="reference_text">User Interface Programming</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Links(API) -->
+    <div id="Links" class="hide_section" style="visibility: hidden;">
+        <!-- <div id="loader"></div> -->
+        <button onclick="hideDiv('Links')" class="back_button" id="Links_btn"><p class="span_button">Home page</p></button>
+        Interest
+        <div style="padding-top: 2rem;">
+            <div id="SpaceX" style="float: inline-start; margin-right: 11rem; margin-left: 5rem; width: 50rem; padding: 0rem;" class="api_information"></div>
+            <div id="Steam" style="float: inline-start; width: 50rem;" class="api_information"></div>
+        </div>
+        <div id="Github" style="float: inline-start; margin-right: 13rem; margin-left: 5rem; width: 50rem; margin-top: 4rem; padding-left: 0.1rem;" class="api_information"></div>
+    </div> 
+
+    <!-- Download-->
+    <div id="Downloads" class="hide_section" style="visibility: hidden;">
+        <button onclick="hideDiv('Downloads')" class="back_button" id="Downloads_btn"><p class="span_button">Home page</p></button>
+        Downloads
+        <div class="paragraph" style="--height:30rem">
+
+            <div  class="download_div" style="float: left;">
+                <a href="#" onclick="window.open('./Franco_Bester_CV.pdf'); return false;">
+                    <img src="./CV.png" class="download_img">
+                </a>
+            </div>
+
+            <div class="download_div" style="float: right;">
+                <a href="#" onclick="window.open('./Franco_Bester_SI_diploma.pdf'); return false;">
+                    <img src="./SI.png" class="download_img">
+                </a>
+            </div>
+
+            <div class="download_div">
+                <a href="#" onclick="window.open('./Franco_Bester_Matric_diploma.pdf'); return false;">
+                    <img src="./Diploma.png" class="download_img">
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+{
+  "name": "franco_bester_cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://FrancoBester.github.io/franco_bester_cv",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
