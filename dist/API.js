@@ -1,6 +1,6 @@
-load_steam();
-load_github();
-load_spaceX();
+// load_steam();
+// load_github();
+// load_spaceX();
 
 async function load_steam(){//function that loads steam account data into a json reponse
     let steam_url = "https://cors-anywhere.herokuapp.com/";//global port
