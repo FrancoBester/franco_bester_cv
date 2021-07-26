@@ -1,0 +1,65 @@
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 150px; */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+}
+  
+.box > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 130px;
+}
+
+.me{
+    width: 350px;
+    height: 450px;
+    border-radius: 20%;
+    margin-right: 0rem;
+    padding-right: 0rem;
+}
+
+.About_text{
+    padding-bottom: 0.95rem;
+    font-size: 1.3rem;
+}
+
+.bar_fill{
+    display: block;
+    height: var(--bar_height);
+    background-color: #000fff;
+    width: 100%;
+    animation-duration: 1s;
+    animation-name: bar_load;
+}
+  
+/* Css class that moves div according to the values given in html */
+.bar_position{
+    /* position: absolute; */
+    /* top: var(--top_position); */
+    /* right: var(--right_position); */
+    /* right: calc(); */
+    width: 100%;
+}
+
+/* Animation that loads bar untill the varaible max is reached */
+@keyframes bar_load{
+    0%  {width: 0}
+    10% {width: calc(var(--percent)*0.1);}
+    20% {width: calc(var(--percent)*0.2);}
+    30% {width: calc(var(--percent)*0.3);}
+    40% {width: calc(var(--percent)*0.4);}
+    50% {width: calc(var(--percent)*0.5);}
+    60% {width: calc(var(--percent)*0.6);}
+    70% {width: calc(var(--percent)*0.7);}
+    80% {width: calc(var(--percent)*0.8);}
+    90% {width: calc(var(--percent)*0.9);}
+  }
