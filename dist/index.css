@@ -1,6 +1,6 @@
 /* html css adds background image to html */
 html{
-    background-image: url("./1.jpg");
+    /* background-image: url("./1.jpg"); */
   }
   
 /* body html tag css, remove padding and margins, width is auto adjusted and hides extra x data*/

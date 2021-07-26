@@ -23,17 +23,17 @@ window.history.forward(1)//stops the user from using browser back button
 
 function init(){
     renderer = new THREE.WebGLRenderer();
-    // render_setSize(window.innerWidth,window.innerHeight);
-    render_setSize(600,300)
+    render_setSize(window.innerWidth,window.innerHeight);
+    // render_setSize(600,300)
     document.body.appendChild(renderer.domElement);
 
-    // window.addEventListener('resize',function(){//function used to change size of scene when size of browser window changes
-    //     var width = window.innerWidth;
-    //     var height = window.innerHeight;
-    //     renderer.setSize(width,height);
-    //     camera.aspect = width/height;
-    //     camera.updateProjectmatrix;
-    // })
+    window.addEventListener('resize',function(){//function used to change size of scene when size of browser window changes
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        renderer.setSize(width,height);
+        camera.aspect = width/height;
+        camera.updateProjectmatrix;
+    })
 
     scene = new THREE.Scene();//space where 3D object is added to 
 
@@ -52,8 +52,26 @@ function init(){
     //         scene.background_loader = rt.texture;
     //     });
     
-    // console.log(background_loader)
+    const background_loader = new THREE.CubeTextureLoader();
+    // const texture = background_loader.load([
+    //     'background/pos-x.jpg',
+    //     'background/neg-x.jpg',
+    //     'background/pos-y.jpg',
+    //     'background/neg-y.jpg',
+    //     'background/pos-z.jpg',
+    //     'background/neg-z.jpg',
+    // ]);
 
+    const texture = background_loader.load([
+        'background/test/px.png',
+        'background/test/nx.png',
+        'background/test/py.png',
+        'background/test/ny.png',
+        'background/test/pz.png',
+        'background/test/nz.png',
+    ])
+
+    scene.background = texture
     var geometry = new THREE.SphereGeometry( 500, 60, 40 );
     geometry.scale(1,1,1);
     var material = new THREE.MeshBasicMaterial({
@@ -112,7 +130,7 @@ function init(){
 
     //used to load custom 3D object
     var loader = new THREE.GLTFLoader();
-    loader.load(`./The_cube.glb`,
+    loader.load(`./rubiks.glb`,
         function (gltf){
             scene.add(gltf.scene);
         },
