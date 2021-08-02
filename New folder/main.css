@@ -7,7 +7,7 @@
     padding-left: 2rem;
 }
 
-.About_text{
+.about_text{
     padding-bottom: 0.95rem;
     font-size: 1.3rem;
     /* max-width: 95%; */
@@ -18,7 +18,7 @@
 .bar_fill{
     display: block;
     height: var(--bar_height);
-    background-color: #000fff;
+    background-color: #e61251;
     width: 100%;
     animation-duration: 1s;
     animation-name: bar_load;
@@ -53,6 +53,7 @@
 h1{
     padding: 2rem;
     font-size: 3rem;
+    color: #e61251;
 }
 
 h2{
@@ -90,3 +91,41 @@ h4{
     padding-top: 1rem;
 }
 /* #endregion API */
+
+/* #region Experience_Page */
+.experience_text{
+    padding-bottom: 0.95rem;
+    font-size: 1.3rem;
+}
+
+.si_image{
+    width: 500px;
+    height: 750px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+/* #endregion Experience_Page */
+
+/* #region Reference_Page */
+.reference_text{
+    font-size: 1.3rem;
+    font-family: cursive;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.reference_image{
+    /* padding: 0.6rem; */
+    max-width: 15rem;
+    max-height: 20rem;
+}
+/* #endregion Reference_Page */
+
+/* #region Download_Page */
+.download_image{
+    width: 23rem;
+    height: 35rem;
+}
+/* #endregion Download_Page */
