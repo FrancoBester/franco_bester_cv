@@ -1,0 +1,217 @@
+/* #region Standard_Tags */
+html, body { 
+    margin: 0; 
+    width: 100%;
+    padding: 0rem;
+    /* overflow-x: hidden; */
+    height: 100%;
+    position: fixed;
+}
+
+h1{
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+h2{
+    padding-bottom: 0.9rem;
+}
+
+h4{
+    padding-bottom: 0.9rem;
+}
+
+.hide_section{
+    /* used to make div on page not take space on page when other div is being shown */
+    position: absolute; 
+    animation-name: fade_out;
+    animation-duration: 2s;
+    /* height: 0px;
+    width: 0px; */
+}
+
+.heading{
+    animation-name: fade_in;
+    animation-duration: 2s;
+}
+/* #endregion Standard_Tags */
+
+/* #region navigation_bar */
+.topnav {
+    background-color: #1a1a1d;
+    overflow: hidden;
+    width: 100%;
+}
+
+.topnav a {
+    float: left;
+    color: rgba(255, 255, 255, 0.897);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #4e4e50;
+    color: #e61251;
+}
+
+.topnav a.active {
+    background-color: #e61251;
+    color: #1a1a1d;
+}
+
+/* #endregion navigation_bar */
+
+/* #region About_Page */
+.me{
+    width: 350px;
+    height: 450px;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.about_text{
+    padding-bottom: 0.95rem;
+    font-size: 1.3rem;
+    /* max-width: 95%; */
+}
+/* #endregion About_Page */
+
+/* #region Experience_Page */
+.experience_text{
+    padding-bottom: 0.95rem;
+    font-size: 1.3rem;
+}
+
+.si_image{
+    width: 500px;
+    height: 750px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+/* #endregion Experience_Page */
+
+/* #region Reference_Page */
+.reference_text{
+    font-size: 1.3rem;
+    font-family: cursive;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.reference_image{
+    /* padding: 0.6rem; */
+    max-width: 15rem;
+    max-height: 20rem;
+}
+/* #endregion Reference_Page */
+
+/* #region Skills_Page */
+.bar_fill{
+    display: block;
+    height: 3rem;
+    background-color: #e61251;
+    width: 100%;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-name: bar_load;
+}
+
+#bar_border{
+    height: var(--bar_height);
+    width: var(--bar_width);
+    border:  0.3rem solid #1a1a1d;
+    background-color: rgba(255, 255, 255, 0.897);
+    margin: 1rem;
+}
+/* Css class that moves div according to the values given in html */
+/* .bar_position{
+    position: absolute;
+    top: var(--top_position);
+    right: var(--right_position);
+    right: calc();
+    width: 100%;
+} */
+
+/* Animation that loads bar untill the varaible max is reached */
+@keyframes bar_load{
+    0%  {width: 0}
+    10% {width: calc(var(--percent)*0.1);}
+    20% {width: calc(var(--percent)*0.2);}
+    30% {width: calc(var(--percent)*0.3);}
+    40% {width: calc(var(--percent)*0.4);}
+    50% {width: calc(var(--percent)*0.5);}
+    60% {width: calc(var(--percent)*0.6);}
+    70% {width: calc(var(--percent)*0.7);}
+    80% {width: calc(var(--percent)*0.8);}
+    90% {width: calc(var(--percent)*0.9);}
+}
+
+/* #endregion Skills_Page */
+
+/* #region Download_Page */
+.download_image{
+    width: 23rem;
+    height: 35rem;
+}
+/* #endregion Download_Page */
+
+/* #region API */
+.youtube_coin{
+    border-radius: 100%;
+    animation: youtube_coin_spin 8s infinite;
+    animation-timing-function: linear;
+    padding: 0.5rem;
+    height: 20rem;
+    width: 20rem;
+}
+
+@keyframes youtube_coin_spin {
+    100%{transform: rotateY(360deg);}
+}
+
+.github_text{
+    padding-top: 1rem;
+}
+
+.api_section{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+/* #endregion API */
+
+/* #region animation */
+@keyframes fade_in{
+    0%  {opacity: 0;}
+    10% {opacity: 0.1;}
+    20% {opacity: 0.2;}
+    30% {opacity: 0.3;}
+    40% {opacity: 0.4;}
+    50% {opacity: 0.5;}
+    60% {opacity: 0.6;}
+    70% {opacity: 0.7;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0.9;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade_out{
+    0%  {opacity: 1;}
+    10% {opacity: 0.9;}
+    20% {opacity: 0.8;}
+    30% {opacity: 0.7;}
+    40% {opacity: 0.6;}
+    50% {opacity: 0.5;}
+    60% {opacity: 0.4;}
+    70% {opacity: 0.3;}
+    80% {opacity: 0.2;}
+    90% {opacity: 0.1;}
+    100% {opacity: 0;}
+}
+/* #endregion animation */
