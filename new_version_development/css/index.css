@@ -3,14 +3,13 @@ html, body {
     margin: 0; 
     width: 100%;
     padding: 0rem;
-    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
     height: 100%;
-    position: fixed;
+    /* position: -ms-page; */
 }
 
 h1{
-    padding: 2rem;
-    font-size: 3rem;
+    padding-bottom: 0.9rem;
 }
 
 h2{
@@ -26,13 +25,12 @@ h4{
     position: absolute; 
     animation-name: fade_out;
     animation-duration: 2s;
-    /* height: 0px;
-    width: 0px; */
 }
 
 .heading{
     animation-name: fade_in;
     animation-duration: 2s;
+    height: 45%;
 }
 /* #endregion Standard_Tags */
 
@@ -66,8 +64,8 @@ h4{
 
 /* #region About_Page */
 .me{
-    width: 350px;
-    height: 450px;
+    width: 450px;
+    height: 550px;
     padding-top: 2rem;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -75,9 +73,21 @@ h4{
 
 .about_text{
     padding-bottom: 0.95rem;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     /* max-width: 95%; */
 }
+
+.back_button{
+    width: 10rem;
+    height: 7rem;
+    background-color: #4e4e50;
+    border: none;
+}
+
+.back_button:hover{
+    background-color: #1a1a1d;
+}
+
 /* #endregion About_Page */
 
 /* #region Experience_Page */

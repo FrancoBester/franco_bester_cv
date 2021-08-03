@@ -36,6 +36,7 @@ function init(){
     })
 
     scene = new THREE.Scene();//space where 3D object is added to 
+    
 
     //used to load custom image asb scene background
     // const img_loader = new THREE.TextureLoader();
@@ -191,6 +192,7 @@ function animate(){
 };
 
 function zoomIN(elementID){//zoom in animation function for the 3D object
+    let size = 0;
     used_cube = true;
     setTimeout(function(){
         setTimeout(function(){
