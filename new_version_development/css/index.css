@@ -3,9 +3,7 @@ html, body {
     margin: 0; 
     width: 100%;
     padding: 0rem;
-    /* overflow-y: auto; */
     height: 100%;
-    /* position: -ms-page; */
 }
 
 h1{
@@ -24,7 +22,9 @@ h4{
     /* used to make div on page not take space on page when other div is being shown */
     position: absolute; 
     animation-name: fade_out;
-    animation-duration: 2s;
+    animation-duration: 3s;
+    height: -100px;
+    width: -100px;
 }
 
 .heading{
@@ -82,10 +82,15 @@ h4{
     height: 7rem;
     background-color: #4e4e50;
     border: none;
+    padding: 0.1rem;
 }
 
 .back_button:hover{
+    width: 10rem;
+    height: 7rem;
     background-color: #1a1a1d;
+    border: none;
+    padding: 0.5rem;
 }
 
 /* #endregion About_Page */
@@ -107,9 +112,8 @@ h4{
 
 /* #region Reference_Page */
 .reference_text{
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     font-family: cursive;
-    padding-left: 0.7rem;
     padding-right: 0.7rem;
     padding-bottom: 0.7rem;
 }
@@ -137,16 +141,13 @@ h4{
     width: var(--bar_width);
     border:  0.3rem solid #1a1a1d;
     background-color: rgba(255, 255, 255, 0.897);
-    margin: 1rem;
 }
-/* Css class that moves div according to the values given in html */
-/* .bar_position{
-    position: absolute;
-    top: var(--top_position);
-    right: var(--right_position);
-    right: calc();
-    width: 100%;
-} */
+#bar_border_2{
+    height: var(--bar_height);
+    width: var(--bar_width);
+    border:  0.3rem solid #4e4e50;
+    background-color: #1a1a1d;
+}
 
 /* Animation that loads bar untill the varaible max is reached */
 @keyframes bar_load{
@@ -166,8 +167,8 @@ h4{
 
 /* #region Download_Page */
 .download_image{
-    width: 23rem;
-    height: 35rem;
+    width: 35rem;
+    height: 50rem;
 }
 /* #endregion Download_Page */
 
