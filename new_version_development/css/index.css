@@ -235,6 +235,7 @@ h4{
     border: 3px solid rgba(218, 225, 230, 0.25);
     border-radius: 90px;
     box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
+    padding: 2rem;
 }
 
 .enter_pad{
@@ -245,4 +246,5 @@ h4{
     border: 2px solid rgba(218, 225, 230, 0.25);
     border-radius: 50px;
     box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
+    padding: 2rem;
 }

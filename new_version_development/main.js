@@ -15,9 +15,7 @@ window.history.forward(1)//stops the user from using browser back button
 function init(){
     renderer = new THREE.WebGLRenderer();
     render_setSize(window.innerWidth,window.innerHeight);
-    // render_setSize(0,0)
     document.body.appendChild(renderer.domElement);
-
     window.addEventListener('resize',function(){//function used to change size of scene when size of browser window changes
         var width = window.innerWidth;
         var height = window.innerHeight;
@@ -38,6 +36,48 @@ function init(){
         './3d/background/nz.png',
     ])
 
+    if(isMobile){
+        touch_pads = document.getElementById("touch_controls")
+        touch_pads.style.visibility="visible"
+        var previous_side = "About"
+        var starting_y = null
+        var moving_x = null
+        var moving_y = null
+        var region = document.getElementById("rotation_pad")
+        region.addEventListener('touchstart', e=>{
+            starting_x = e.touches[0].pageX
+            starting_y = e.touches[0].pageY
+        })
+        
+        region.addEventListener('touchmove', e=>{
+            moving_x = e.touches[0].pageX
+            moving_y  = e.touches[0].pageY
+        })
+
+        region.addEventListener('touchend', e=>{
+            var test_x = Math.abs(starting_x - moving_x)
+            var test_y = Math.abs(starting_y - moving_y)
+            if (test_x > test_y){
+                console.log("yes")
+                if((starting_x - moving_x) < 0){
+                    previous_side = determine_direction(previous_side,"right")
+                }
+                else{
+                    previous_side = determine_direction(previous_side,"left")
+                }
+            }
+            else{
+                console.log("no")
+                if((starting_y - moving_y) < 0){
+                    previous_side = determine_direction(previous_side,"down")
+                }
+                else{
+                    previous_side = determine_direction(previous_side,"up")
+                }
+            }
+        })
+
+    }
     scene.background = texture
     var geometry = new THREE.SphereGeometry( 500, 60, 40 );
     geometry.scale(1,1,1);
@@ -55,41 +95,7 @@ function init(){
     controls = new THREE.OrbitControls( camera, renderer.domElement );//Allows the user to rotate around the 3D object
     controls.update()
 
-    // var previous_side = "About"
-    // var starting_y = null
-    // var moving_x = null
-    // var moving_y = null
-    // var region = document.getElementById("rotation_pad")
-    // region.addEventListener('touchstart', e=>{
-    //     starting_x = e.touches[0].pageX
-    //     starting_y = e.touches[0].pageY
-    // })
     
-    // region.addEventListener('touchmove', e=>{
-    //     moving_x = e.touches[0].pageX
-    //     moving_y  = e.touches[0].pageY
-    // })
-
-    // region.addEventListener('touchend', e=>{
-    //     var test_x = Math.abs(starting_x - moving_x)
-    //     var test_y = Math.abs(starting_y - moving_y)
-    //     if (test_x > test_y){
-    //         if((starting_x - moving_x) < 0){
-    //             previous_side = determine_direction(previous_side,"right")
-    //         }
-    //         else{
-    //             previous_side = determine_direction(previous_side,"left")
-    //         }
-    //     }
-    //     else{
-    //         if((starting_y - moving_y) < 0){
-    //             previous_side = determine_direction(previous_side,"down")
-    //         }
-    //         else{
-    //             previous_side = determine_direction(previous_side,"up")
-    //         }
-    //     }
-    // })
     
     var light = new THREE.AmbientLight(0xffffff, 1, 0 );//Adds ligthing object to scene
     scene.add(light);//adds lighting to scene
@@ -310,7 +316,7 @@ function determine_side(current_side,direction){
                         new_side = "Experience"
                     }
                     else if(direction == 'right'){
-                        new_side = "Interests"
+                        new_side = "Links"
                     }
                     else if (direction == 'down'){
                         new_side = "References"
@@ -320,17 +326,17 @@ function determine_side(current_side,direction){
                     }
         break;
         // interest
-        case 'Interests' : if(direction == 'up'){
+        case 'Links' : if(direction == 'up'){
                         new_side = "Experience"
                     }
                     else if(direction == 'right'){
                         new_side = "Langauge"
                     }
                     else if (direction == 'down'){
-                        new_side = "Reference"
+                        new_side = "References"
                     }
                     else{
-                        new_side = "Download"
+                        new_side = "Downloads"
                     }
         break;
         // langauge
@@ -341,21 +347,40 @@ function determine_side(current_side,direction){
                         new_side = "About"
                     }
                     else if (direction == 'down'){
-                        new_side = "Reference"
+                        new_side = "References"
                     }
                     else{
-                        new_side = "Interest"
+                        new_side = "Links"
                     }
         break;
         // Experience
         case 'Experience' :  if (direction == 'down'){
                         new_side = "About"
                     }
+                    else if(direction == 'right'){
+                        new_side = "Downloads"
+                    }
+                    else if (direction == 'up'){
+                        new_side = "Links"
+                    }
+                    else{
+                        new_side = "Langauge"
+                    }
         break;
         //References 
         case 'References' : if(direction == 'up'){
                         new_side = "About"
                     }
+                    else if(direction == 'right'){
+                        new_side = "Downloads"
+                    }
+                    else if (direction == 'down'){
+                        new_side = "Links"
+                    }
+                    else{
+                        new_side = "Langauge"
+                    }
+
         break;
     }
     return new_side
@@ -365,37 +390,14 @@ function determine_direction(side,direction){
     new_side = determine_side(side,direction)
     rotate(new_side)
     return new_side
-    // console.log(camera_touch.position)
-    // if(camera_touch.position.y >= 0.8){ //Bottom side
-    //     console.log("References");
-    // }
-    // else if(camera_touch.position.y <= -0.8){ //Top side
-    //     console.log("Experience");
-    // }
-    // else{
-    //     if(camera_touch.position.z <= -0.9){ //Front side
-    //         console.log("Langauge");
-    //     }
-    //     else if(camera_touch.position.z >= 0.9){//Back side
-    //         console.log("Downloads");
-    //     }
-    //     else{
-    //         if(camera_touch.position.x >= 0.9){//Left side
-    //             console.log("Links");
-    //         }
-    //         else if(camera_touch.position.x <= -0.9){//Right side
-    //             console.log("About");
-    //         }
-    //     }
-    // }
 }
 
 function rotate(rotate_side){
     console.log(rotate_side)
-    const sides = ["About","Downloads","Interests","Langauge","References","Experience"]
-    const sides_x = [7,0.020904104495790363,7,-0.010139336351216562,0.5,0.5]
-    const sides_y = [-0.02975327986781878,-0.006864156244615587,-0.003881470534919586,-0.01783159229728872,-7,7]
-    const sides_z = [0.043734974574030666,-7,-0.06437004881137393,7,9.999671259919298e-7,2.1319999999996445e-7]
+    const sides = ["About","Downloads","Links","Langauge","References","Experience"]
+    const sides_x = [7 , 0.020904104495790363 , -7, -0.010139336351216562 , 0.5 , 0.5]
+    const sides_y = [-0.02975327986781878 , -0.006864156244615587 , -0.003881470534919586  ,-0.01783159229728872 , -7 , 7]
+    const sides_z = [0.043734974574030666 , -7, -0.06437004881137393 , 7 , 9.999671259919298e-7, 2.1319999999996445e-7]
     var index = sides.indexOf(rotate_side)
     console.log(index)
     setTimeout(function(){
