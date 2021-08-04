@@ -53,7 +53,6 @@ function init(){
     set_camera(7.989,0.366,-0.18)//set the camera position to the front of the 3D cube
 
     controls = new THREE.OrbitControls( camera, renderer.domElement );//Allows the user to rotate around the 3D object
-    // controls.enableZoom = false
     controls.update()
 
     // var previous_side = "About"
