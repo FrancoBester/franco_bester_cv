@@ -6,8 +6,6 @@ var used_cube = false//used to check if user used to 3D cube to navigate or het 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);//check if site is on mobile or pc
 var past_div = null//used to get the name of the past div that the user viewed, sets to null when user has not viewed any div
 
-console.log(isMobile)
-
 init();//initiate the 3D model
 animate();//shows the 3D model on the site
 window.history.forward(1)//stops the user from using browser back button
@@ -19,15 +17,12 @@ function init(){
     window.addEventListener('resize',function(){//function used to change size of scene when size of browser window changes
         var width = window.innerWidth;
         var height = window.innerHeight;
-        console.log(width,height)
-
         renderer.setSize(width,height);
         camera.aspect = width/height;
         camera.updateProjectmatrix;
     })
 
     scene = new THREE.Scene();//space where 3D object is added to 
-    console.log(scene)
     
     const background_loader = new THREE.CubeTextureLoader();
     const texture = background_loader.load([
@@ -126,7 +121,6 @@ function init(){
         let ray_x = raycaster.ray.direction.x;//gets current x position of object
         let ray_y = raycaster.ray.direction.y;//gets current y position of object
         let ray_z = raycaster.ray.direction.z;//gets current z position of object
-        // console.log(raycaster.ray.direction)
         //if statements used to determine which side the user is looking at based on x/y/z opition
         if(ray_y >= 0.8){ //Bottom side
             zoomIN("References");
@@ -230,22 +224,17 @@ function showDiv(elementID){// function used to remove a DIV html tag from the h
     }
 
     if(isMobile == true){//changes the layout of langauge div if user is viewing page on a mobile device
-        console.log("hide touch controls")
         var touch_controls = document.getElementById("touch_controls")
-        console.log(touch_controls.classList)
         touch_controls.visibility = "hidden"
         touch_controls.classList.add("hide_pads")
-        console.log(touch_controls.classList)
     }
     
     document.getElementById(elementID+"_btn").disabled = false;//disables 
     element.classList.remove("hide_section");//used to remove class styles
     element.style.visibility = "visible";//changes div visiblity to allow user to see it
     element.classList.add("heading"); //used to add a new class style
-
-    if(elementID == "Langauge"){//checks if th current div is the langauge dic
+    if(elementID == "Langauge"){//checks if the current div is the langauge dic
         var bar_elements = document.getElementsByClassName("bar_fill")//gets all the elements with the class of 'bar_fill'
-        console.log(bar_elements)
         for(var i=0; i<bar_elements.length ;i++){//adds animation and width to each of the elements in bar_elements
             bar_elements[i].style.animationName = "bar_load";
             bar_elements[i].style.width="var(--percent)";
@@ -263,11 +252,6 @@ function hideDiv(elementID){//method used to hide html and show the cube
             break;
         case "Langauge":
             previous_side = camera_positions[1];
-            var bar_elements=document.getElementsByClassName("bar_fill");//gets all the item with the 'bar_fill' class
-            for(var i=0; i<bar_elements.length ;i++){//changes the animation name and width of each of the item with the 'bar_fill' class 
-                bar_elements[i].style.animationName="";//removes animations
-                bar_elements[i].style.width="";//makes element invisible
-            }
             break;
         case "Experience":
             previous_side = camera_positions[2];
@@ -283,10 +267,11 @@ function hideDiv(elementID){//method used to hide html and show the cube
             break;
         
     };
-    
+
     if(document.getElementById(elementID+"_btn").disabled == false && used_cube == true){
         element.classList.add("hide_section");//adds class to div to hide div from user
-        console.log(element.classList)
+        element.style.animationName="fade_out"
+        element.style.animationDuration="3s"
         document.getElementById(elementID+"_btn").disabled = true;//disbales the back button to stop user from pressing multiple times
         zoomOut(element,previous_side);//class xoomout animation for 3D object
         used_cube = false;//changes used_cube to check if user useses the cube the next time
@@ -406,13 +391,11 @@ function determine_direction(side,direction){
 }
 
 function rotate(rotate_side){
-    console.log(rotate_side)
     const sides = ["About","Downloads","Links","Langauge","References","Experience"]
     const sides_x = [7 , 0.020904104495790363 , -7, -0.010139336351216562 , 0.5 , 0.5]
     const sides_y = [-0.02975327986781878 , -0.006864156244615587 , -0.003881470534919586  ,-0.01783159229728872 , -7 , 7]
     const sides_z = [0.043734974574030666 , -7, -0.06437004881137393 , 7 , 9.999671259919298e-7, 2.1319999999996445e-7]
     var index = sides.indexOf(rotate_side)
-    console.log(index)
     setTimeout(function(){
         setTimeout(function(){
             gsap.to(camera.position,{

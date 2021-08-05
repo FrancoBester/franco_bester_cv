@@ -22,7 +22,7 @@ h4{
     /* used to make div on page not take space on page when other div is being shown */
     position: absolute; 
     animation-name: fade_out;
-    animation-duration: 5s;
+    animation-duration: 3s;
     height: -100px;
     width: -100px;
 }
@@ -53,6 +53,21 @@ h4{
     90% {opacity: 0.1;}
     100% {opacity: 0;}
 }
+
+@keyframes fade_in{
+    0%  {opacity: 0;}
+    10% {opacity: 0.1;}
+    20% {opacity: 0.2;}
+    30% {opacity: 0.3;}
+    40% {opacity: 0.4;}
+    50% {opacity: 0.5;}
+    60% {opacity: 0.6;}
+    70% {opacity: 0.7;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0.9;}
+    100% {opacity: 1;}
+}
+
 /* #endregion Standard_Tags */
 
 /* #region navigation_bar */
@@ -151,26 +166,16 @@ h4{
     display: block;
     height: 3rem;
     background-color: #e61251;
-    width: 100%;
-    animation-delay: 2s;
-    animation-duration: 1s;
-    animation-name: bar_load;
+    width: 0%;
+    animation-duration: 2s;
+    /* animation-name: bar_load; */
 }
 
 #bar_border{
-    height: var(--bar_height);
-    width: var(--bar_width);
     border:  0.3rem solid #1a1a1d;
     background-color: rgba(255, 255, 255, 0.897);
 }
-#bar_border_2{
-    height: var(--bar_height);
-    width: var(--bar_width);
-    border:  0.3rem solid #4e4e50;
-    background-color: #1a1a1d;
-}
 
-/* Animation that loads bar untill the varaible max is reached */
 @keyframes bar_load{
     0%  {width: 0}
     10% {width: calc(var(--percent)*0.1);}
@@ -218,25 +223,8 @@ h4{
 }
 /* #endregion API */
 
-/* #region animation */
-@keyframes fade_in{
-    0%  {opacity: 0;}
-    10% {opacity: 0.1;}
-    20% {opacity: 0.2;}
-    30% {opacity: 0.3;}
-    40% {opacity: 0.4;}
-    50% {opacity: 0.5;}
-    60% {opacity: 0.6;}
-    70% {opacity: 0.7;}
-    80% {opacity: 0.8;}
-    90% {opacity: 0.9;}
-    100% {opacity: 1;}
-}
-
-
-/* #endregion animation */
-
-/* .rotation_pad{
+/* #region touch_controls */
+.rotation_pad{
     background-image: url(test.png);
     background-size: 100%;
     width: 150px;
@@ -256,4 +244,8 @@ h4{
     border-radius: 50px;
     box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
     padding: 2rem;
-} */
+}
+
+/* #endregion touch_controls */
+
+
