@@ -22,7 +22,7 @@ h4{
     /* used to make div on page not take space on page when other div is being shown */
     position: absolute; 
     animation-name: fade_out;
-    animation-duration: 3s;
+    animation-duration: 5s;
     height: -100px;
     width: -100px;
 }
@@ -31,6 +31,27 @@ h4{
     animation-name: fade_in;
     animation-duration: 2s;
     height: 45%;
+}
+
+.hide_pads{
+    position: absolute;
+    height: -100px;
+    width: -100px;
+    opacity: 0%;
+}
+
+@keyframes fade_out{
+    0%  {opacity: 1;}
+    10% {opacity: 0.9;}
+    20% {opacity: 0.8;}
+    30% {opacity: 0.7;}
+    40% {opacity: 0.6;}
+    50% {opacity: 0.5;}
+    60% {opacity: 0.4;}
+    70% {opacity: 0.3;}
+    80% {opacity: 0.2;}
+    90% {opacity: 0.1;}
+    100% {opacity: 0;}
 }
 /* #endregion Standard_Tags */
 
@@ -212,22 +233,10 @@ h4{
     100% {opacity: 1;}
 }
 
-@keyframes fade_out{
-    0%  {opacity: 1;}
-    10% {opacity: 0.9;}
-    20% {opacity: 0.8;}
-    30% {opacity: 0.7;}
-    40% {opacity: 0.6;}
-    50% {opacity: 0.5;}
-    60% {opacity: 0.4;}
-    70% {opacity: 0.3;}
-    80% {opacity: 0.2;}
-    90% {opacity: 0.1;}
-    100% {opacity: 0;}
-}
+
 /* #endregion animation */
 
-.rotation_pad{
+/* .rotation_pad{
     background-image: url(test.png);
     background-size: 100%;
     width: 150px;
@@ -247,4 +256,4 @@ h4{
     border-radius: 50px;
     box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
     padding: 2rem;
-}
+} */

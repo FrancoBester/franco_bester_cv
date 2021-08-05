@@ -19,12 +19,15 @@ function init(){
     window.addEventListener('resize',function(){//function used to change size of scene when size of browser window changes
         var width = window.innerWidth;
         var height = window.innerHeight;
+        console.log(width,height)
+
         renderer.setSize(width,height);
         camera.aspect = width/height;
         camera.updateProjectmatrix;
     })
 
     scene = new THREE.Scene();//space where 3D object is added to 
+    console.log(scene)
     
     const background_loader = new THREE.CubeTextureLoader();
     const texture = background_loader.load([
@@ -39,6 +42,7 @@ function init(){
     if(isMobile){
         touch_pads = document.getElementById("touch_controls")
         touch_pads.style.visibility="visible"
+        touch_pads.classList.remove("hide_pads")
         var previous_side = "About"
         var starting_y = null
         var moving_x = null
@@ -58,7 +62,6 @@ function init(){
             var test_x = Math.abs(starting_x - moving_x)
             var test_y = Math.abs(starting_y - moving_y)
             if (test_x > test_y){
-                console.log("yes")
                 if((starting_x - moving_x) < 0){
                     previous_side = determine_direction(previous_side,"right")
                 }
@@ -67,7 +70,6 @@ function init(){
                 }
             }
             else{
-                console.log("no")
                 if((starting_y - moving_y) < 0){
                     previous_side = determine_direction(previous_side,"down")
                 }
@@ -77,6 +79,10 @@ function init(){
             }
         })
 
+        var enter_pad = document.getElementById("enter_pad")
+        enter_pad.addEventListener("click", e=>{
+            raycast()
+        })
     }
     scene.background = texture
     var geometry = new THREE.SphereGeometry( 500, 60, 40 );
@@ -224,18 +230,18 @@ function showDiv(elementID){// function used to remove a DIV html tag from the h
     }
 
     if(isMobile == true){//changes the layout of langauge div if user is viewing page on a mobile device
-        console.log("mobile")
+        console.log("hide touch controls")
+        var touch_controls = document.getElementById("touch_controls")
+        console.log(touch_controls.classList)
+        touch_controls.visibility = "hidden"
+        touch_controls.classList.add("hide_pads")
+        console.log(touch_controls.classList)
     }
     
     document.getElementById(elementID+"_btn").disabled = false;//disables 
     element.classList.remove("hide_section");//used to remove class styles
     element.style.visibility = "visible";//changes div visiblity to allow user to see it
     element.classList.add("heading"); //used to add a new class style
-
-    if(isMobile == true){//if statement used to had back button when on mobile
-        var test = document.getElementById(elementID+'_btn')
-        test.style.visibility = "hidden";
-    };
 
     if(elementID == "Langauge"){//checks if th current div is the langauge dic
         var bar_elements = document.getElementsByClassName("bar_fill")//gets all the elements with the class of 'bar_fill'
@@ -275,6 +281,7 @@ function hideDiv(elementID){//method used to hide html and show the cube
         case "References":
             previous_side = camera_positions[5];
             break;
+        
     };
     
     if(document.getElementById(elementID+"_btn").disabled == false && used_cube == true){
@@ -290,6 +297,12 @@ function hideDiv(elementID){//method used to hide html and show the cube
         element.style.visibility = "hidden";
         element.classList.remove("heading");
         render_setSize(window.innerWidth,window.innerHeight);//Makes scene space bigger to show 3D object to user
+    }
+
+    if(isMobile == true){//changes the layout of langauge div if user is viewing page on a mobile device
+        var touch_controls = document.getElementById("touch_controls")
+        touch_controls.visibility = "visible"
+        touch_controls.classList.remove("hide_pads")
     }
 };
 
