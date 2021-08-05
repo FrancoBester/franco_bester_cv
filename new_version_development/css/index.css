@@ -21,8 +21,6 @@ h4{
 .hide_section{
     /* used to make div on page not take space on page when other div is being shown */
     position: absolute; 
-    animation-name: fade_out;
-    animation-duration: 3s;
     height: -100px;
     width: -100px;
 }
@@ -30,6 +28,7 @@ h4{
 .heading{
     animation-name: fade_in;
     animation-duration: 2s;
+    animation-timing-function: linear;
     height: 45%;
 }
 
@@ -168,7 +167,8 @@ h4{
     background-color: #e61251;
     width: 0%;
     animation-duration: 2s;
-    /* animation-name: bar_load; */
+    animation-timing-function: linear;
+
 }
 
 #bar_border{
@@ -189,6 +189,18 @@ h4{
     90% {width: calc(var(--percent)*0.9);}
 }
 
+@keyframes bar_empty {
+    90%  {width: 0}
+    80% {width: calc(var(--percent)*0.1);}
+    70% {width: calc(var(--percent)*0.2);}
+    60% {width: calc(var(--percent)*0.3);}
+    50% {width: calc(var(--percent)*0.4);}
+    40% {width: calc(var(--percent)*0.5);}
+    30% {width: calc(var(--percent)*0.6);}
+    20% {width: calc(var(--percent)*0.7);}
+    10% {width: calc(var(--percent)*0.8);}
+    0% {width: calc(var(--percent)*0.9);}
+}
 /* #endregion Skills_Page */
 
 /* #region Download_Page */

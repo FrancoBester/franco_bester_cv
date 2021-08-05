@@ -252,6 +252,12 @@ function hideDiv(elementID){//method used to hide html and show the cube
             break;
         case "Langauge":
             previous_side = camera_positions[1];
+            var bar_elements=document.getElementsByClassName("bar_fill");//gets all the item with the 'bar_fill' class
+            for(var i=0; i<bar_elements.length ;i++){//changes the animation name and width of each of the item with the 'bar_fill' class 
+                bar_elements[i].style.animationName="bar_empty";//removes animations
+                bar_elements[i].style.animationDuration="3s";
+                bar_elements[i].style.width="";//makes element invisible
+            }
             break;
         case "Experience":
             previous_side = camera_positions[2];
@@ -272,6 +278,7 @@ function hideDiv(elementID){//method used to hide html and show the cube
         element.classList.add("hide_section");//adds class to div to hide div from user
         element.style.animationName="fade_out"
         element.style.animationDuration="3s"
+        element.style.animationTimingFunction="linear"
         document.getElementById(elementID+"_btn").disabled = true;//disbales the back button to stop user from pressing multiple times
         zoomOut(element,previous_side);//class xoomout animation for 3D object
         used_cube = false;//changes used_cube to check if user useses the cube the next time
