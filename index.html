@@ -1,253 +1,443 @@
 <!DOCTYPE html>
 <html lang="en" s>
+    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height ">
-    <title>Document</title>
+
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Franco Bester CV</title>
+
 </head>
-<body>
-    <!-- Navigation bar -->
-    <div class="topnav" id="navigation_bar">
-        <a class="active" href="#About" onclick="showDiv('About')">About</a>
-        <a href="#Experience" onclick="showDiv('Experience')">Work exrience</a>
-        <a href="#Langauge" onclick="showDiv('Langauge')">Languages</a>
-        <a href="#Links" onclick="showDiv('Links')">Links</a>
-        <a href="#References" onclick="showDiv('References')">Refrences</a>
-        <a href="#Downloads" onclick="showDiv('Downloads')">Download</a>
+
+<body style="background-color: #4e4e50">
+    <div class="d-flex flex-column">
+        <div class="topnav" id="navigation_bar">
+            <a class="active" href="#About" onclick="showDiv('About')">ABOUT ME</a>
+            <a href="#Experience" onclick="showDiv('Experience')">WORK EXPERIENCE</a>
+            <a href="#Langauge" onclick="showDiv('Langauge')">PROGRAMMING EXPERIENCE</a>
+            <a href="#Links" onclick="showDiv('Links')">PERSONAL INTERESTS</a>
+            <a href="#References" onclick="showDiv('References')">REFERENCES</a>
+            <a href="#Downloads" onclick="showDiv('Downloads')">DOCUMENTS</a>
+        </div>
     </div>
 
-    <!-- Javascript links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
-    <script src="GLTFLoader.js"></script>
-    <script  src="OrbitControls.js"></script>
+    <script src="./js/GLTFLoader.js"></script>
+    <script  src="./js/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="API.js"></script>
-    
-    <!-- About page HTML -->
-    <div id="About" class="hide_section" style="visibility: hidden;"> 
-        <!-- Button used to call javascript function which creates 3d object again and hides html  -->
-        <button onclick="hideDiv('About')" class="back_button" id="About_btn"><p class="span_button">Home page</p></button>
-        About me
-        <div class="paragraph" style="--height: 47rem">
-            <section style="float: inline-start;margin-right: 1rem;">
-                <img src="./Profil_1.jpg" class="me"/>
-                <section style="background-color: #949494;">
-                    <p style="font-size: 3rem;font-weight: bolder;color:#000fff; margin-bottom: 0.5rem;">Contact info</p>
-                    <p style="font-size: 1.4rem; margin-top: 0.3rem;">Name: Franco Bester</p>
-                    <p style="font-size: 1.4rem;">Email: 
-                        <a href="#About" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=francobester17@gmail.com')">francobester17@gmail.com</a>
-                    </p>
-                    <p style="font-size: 1.4rem;">Cell: +27 78 002 3227</p>
+  
+    <div id="About" class="hide_section" style="visibility: hidden;">
+        <div class="d-flex">
+            <div class="flex-sm-fill">
+                <button onclick="hideDiv('About')" class="back_button" id="About_btn"><img src="images/giphy.gif" style="width: 6rem; height: 4rem; justify-content: center;"><p style="color: #e61251;">RETURN</p></button>
+            </div>
+
+            <div class="d-flex flex-fill">
+                <div class="d-flex flex-column bd-highlight mb-3" style="background-color: #4e4e50">
+                    <h1 class="d-flex justify-content-center" style="color: #e61251; font-size: 4.2rem;">ABOUT ME</h1>
+                </div>
+            </div>   
+        </div>
+        <section class="d-flex justify-content-top">
+            <section class="d-flex justify-content-between" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d; max-width: 82%;">
+                <section class="d-flex flex-column bd-highlight mb-3" style="padding-top: 2rem;padding-left: 2rem; padding-right: 2rem;">
+                    <p class="about_text">My name is Franco Bester, in 2020 I graduated with honors from the NWU Vaal campus and received my B.Sc. degree in Information Technology.</p>
+                    <p class="about_text">Currently I am completing by Honors degree, with my studies and research mainly focussing on the development and implementation of artficial intelligence</p>
+                    <p class="about_text">Technology has always peaked my interest resulting in a great passion and fashionation in all things related to Information Technology.</p> 
+                    <p class="about_text">I am a computer hardware and software enthusiast with a great instrest and appaite for new technologies and innovations in all field relating to I.T.</p> 
+                    <p class="about_text">50% of my spare time is spend doing research on new and upcomming technological products and services,
+                        30% is spend developing and improving my software development skills and the last
+                        20% is set aside to allow myself to relax and enjoy the other parts of life. 
+                    </p>  
+                    <p class="about_text">I am a great team player, I am a very cooperative person who does not have a problem receiving orders from others along with being able to assume a leadership role if the sistution calls for it.</p>
+                    <p class="about_text">While I am a strong advidcite for teamwork I don't have a problem working on my own and taking full responsiblity for all my mistakes and sortcomings</p>
+                    <p class="about_text">Planning and scheduling has always been one of my top priorities when starting any new project and because of this my planning and scheduling abilties have grown to be one of my strongest skills  </p>
+                    <p class="about_text">I am a very hard worker and always put 100% of my energy into everything that I do</p>
+                    <p class="about_text">My strongest personal trait is that I form strong bonds with those close to me and that I have always cared alot about my family and friends and value them the most in life</p>   
                 </section>
             </section>
 
-            <section style="float: inline-start;width: 80%; background-color:  #ffffff ;">
-                <p class="About_text"> My name is Franco Bester, I am a sotfware developer currently completing my final year in Information Technologies at NWU Vaal.</p>
-                <p class="About_text"> For the last 6 years I have been doing programming either in high school or at university, technology has always been interesting to me 
-                    and I have developed a great passion and interesset in all things related to Information Technology. </p> 
-                <p class="About_text">I am a computer, software enthusiast with a great instrest and appaite for new technologies and innovations in my field.</p> 
-                <p class="About_text">50% of my spare time is spend doing research on new and upcomming technological products and services while
-                    30% is spend developing and improving my software development skills and the last
-                    20% is set aside to allow myself to relax and enjoy the other parts of life. 
-                </p>
-                   
-                <p></p>
+            <section class="d-flex justify-content-end" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+                <section  style="background-color: #4e4e50; width: 100%;">
+                    <section class="d-flex justify-content-center">
+                        <img src="./images/Profil_1.jpg" class="me"/>
+                    </section>
 
-                <p class="About_text">I am a great team player, I am a very cooperative person who does not have a problem receiving orders from others along with being able to assume a leadership role if the sistution calls for it.</p>
-                <p class="About_text">While I am a strong advidcite for teamwork I don't have a problem working on my own and taking full responsiblity for all my mistakes and sortcomings</p>
-                <p class="About_text">Planning and scheduling has always been one of my top priorities when starting any new project and because of this my planning and scheduling abilties have grown to be own of my strongest skills  </p>
-                <p class="About_text">I am a very hard worker and always put 100% of my energy into everything that I do</p>
-                <p class="About_text">My strongest personal trait is that I form strong bonds with those close to me and that I have always cared alot about my family and friends and value them the most in life</p>   
-
+                    <section class="d-flex justify-content-center">
+                        <section class=".flex-column" style="font-family: cursive; padding: 2rem;">
+                            <h2 style="font-size: 2.5rem;">Contact info</h2>
+                            <h4 style="font-size: 2rem;">Name: Franco Bester</h4>
+                            <h4 style="font-size: 2rem;">Email: 
+                                <a href="#About" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=francobester17@gmail.com')" style="color: #e61251;">francobester17@gmail.com</a>
+                            </h4>
+                            <h4 style="font-size: 2rem;">Cell: +27 78 002 3227</h4>
+                        </section>
+                    </section>
+                    
+                </section>
             </section>
-        </div>
+        </section>        
+        
     </div>
-    
-    <!-- Experience -->
+
     <div id="Experience" class="hide_section" style="visibility: hidden;">
-        <button onclick="hideDiv('Experience')" class="back_button" id="Experience_btn"><p class="span_button">Home page</p></button>
-        Past work experience
-        <div class="paragraph" style="--height: 47rem">
-            <section style="float: inline-end;">
-                <a href="#" onclick="window.open('./Franco_Bester_SI_diploma.pdf'); return false;">
-                    <img src="./SI.png" class="SI_img">
-                </a>
+        <div class="d-flex">
+            <div class="flex-sm-fill">
+                <button onclick="hideDiv('Experience')" class="back_button" id="Experience_btn"><img src="images/giphy.gif" style="width: 6rem; height: 4rem;"><p style="color: #e61251;">RETURN</p></button>
+            </div>
+
+            <div class="d-flex flex-fill">
+                <div class="d-flex flex-column bd-highlight mb-3" style="background-color: #4e4e50">
+                    <h1 class="d-flex justify-content-center" style="color: #e61251;  font-size: 4.2rem;">PAST WORK EXPERIENCE</h1>
+                </div>
+            </div>   
+        </div>
+        <section class="d-flex flex-row">
+            <section>
+                <img src="./images/g_si.jpg" class="si_image">
+                <section style="padding-top: 0.95rem;">
+                    <h2 class="social_accounts"><a href="#Experience" onclick="open_new_window('www.linkedin.com/in/franco-bester-bb0992207/')" style="color: #e61251;">LINKEDIN</a></h2>
+                    <h2 class="social_accounts"><a href="#Experience" onclick="open_new_window('www.careers24.com/Candidate/Profile')" style="color: #e61251;">CAREERS24</a></h2>
+                    <h2 class="social_accounts"><a href="#Experience" onclick="open_new_window('github.com/FrancoBester')" style="color: #e61251;">GITHUB</a></h2>
+                </section>
             </section>
-
-            <section style="background-color: #ffffff; width: 80%; padding: 1rem;">
-                <p class="experience_text">For the past 2 years I have been working a the North-West University Vaal campus in Vanderbijlpark ( 
-                    <a href="#Experience" onclick="open_new_window('www.nwu.ac.za/welcome')">NWU)</a> 
+            
+            <section class="d-flex flex-column bd-highlight mb-3" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d; padding-top: 2rem;padding-left: 2rem; padding-right: 2rem;">
+                <p class="experience_text">For the past few years I have been working a the North-West University Vaal campus in Vanderbijlpark (
+                    <a href="#Experience" onclick="open_new_window('www.nwu.ac.za/welcome')" style="color: #e61251;">NWU</a> ).
                 </p>
-                <p class="experience_text">In 2018 I was employed at the NWU Vaal campus as a Supplemental Instructor(SI) for the user interface programming at first year module, to become an SI a student needs to attend and pass a
-                    interdicoty course. Once this course has been passed a student receives a diploma and is allowed to be employeed as a Supplemental Instructor
+                <p class="experience_text">In 2018 I was employed at the NWU Vaal campus as a Supplemental Instructor(SI) for the user interface programming module, to become an SI a student needs to attend and pass a
+                    interdictory course. Once this course has been passed a student receives a diploma and is allowed to be employeed as a Supplemental Instructor.
                 </p>
-                <p class="experience_text">As a SI a student is required to attend and assist students in their contact/theoretical classes along with providing and creating additional assignments/classes and explanations</p>
-
-                <p class="experience_text">2019 I transitioned from being a SI to be a Student Assistant(
-                    <a href="#Experience" onclick="open_new_window('services.nwu.ac.za/ctl/supplemental-instruction')">read more</a>
-                ), both positions are very similiar with the main difference being that as a student assistant you are required to mark student test and assignment instead of providing additional learning opportunities for students</p>
-                <p class="experience_text">In 2019 I assistant multiple modules: </p>
+                <p class="experience_text">As a SI a student is required to attend and assist students in their contact/theoretical classes along with providing and creating additional learning opportunities to grow students knowledge.</p>
+    
+                <p class="experience_text">2019 I transitioned from being a SI to be a Student Assistant (
+                    <a href="#Experience" onclick="open_new_window('services.nwu.ac.za/ctl/supplemental-instruction')" style="color: #e61251;">read more</a>
+                ), both positions are very similiar with the main difference being that as a student assistant you are required to mark student test and assignment instead of providing additional learning opportunities for students.
+                </p>
+                <p class="experience_text">In the past I have assisted in the following modules:</p>
                 <p class="experience_text">second year - object oriented programming & apps/advanced user interface programming</p>
                 <p class="experience_text">first year -  structured programming & user interface programming </p>
-                <p class="experience_text">All my past work experienced required that I was able to work well with other people(students), be to able to work well in a team and be a valuable/reliable person on who the rest of my team could place their trust in</p>
-                <p class="experience_text">My past jobs also required that I had good communction and explanation skills to beter understand and assist students with their problems</p>
-                <p class="experience_text">I also participated as a adjudicator in the past 2 GeeXpo's(
-                    <a href="#Experience" onclick="open_new_window('natural-sciences.nwu.ac.za/geexpo')">read more</a>) where I along with other NWU employes marked and assessed highschool yearly IT projects
+                <p class="experience_text">All my past work experienced required me to collaborate with other people(students) and to able to work well in a team and be a valuable/reliable person on who the rest of my team could place their trust in.</p>
+                <p class="experience_text">My past jobs also required that I had good communction and explanation skills to beter understand and assist students with their problems.</p>
+                <p class="experience_text">I also participated as a adjudicator in both the 2018 and 2019 GeeXpo events held at the Vaal campus(
+                    <a href="#Experience" onclick="open_new_window('natural-sciences.nwu.ac.za/geexpo')" style="color: #e61251;">read more</a> ) where I along with other NWU employes marked and assessed the yearly IT projects of highschool students.
                 </p>
             </section>
-        </div>
+        </section>
     </div>
 
-    <!-- Langauge -->
     <div id="Langauge" class="hide_section" style="visibility: hidden;">
-        <button onclick="hideDiv('Langauge')" class="back_button" id="Langauge_btn"><p class="span_button">Home page</p></button>
-        Programming langauges
-        <div class="paragraph" style="--height: 65rem" id="lang_skils">
-            <section style="float: left; width: 40%;">
-                <p class="langauge_text" style="width: 100%;">For the past 6 years I have been improving and expading my programming knowledge while also learning new langauges every change I get.</p>
-                <p class="langauge_text">I have a greater interest in back-end development but I am also passion for front-end development and providing the user with both a great user interface and expereince.</p>
-                <p class="langauge_text" style="width: 70%">I am very experienced working with SQL based databases, I haved used multiple different DBMS like MYSQL, Oracle and MS Access.</p>
-            </section>
-
-            <div class="bar_position" style="--top_position: 10rem;--right_position:47rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">C# - 9/10</p>
-                <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+        <div class="d-flex">
+            <div class="flex-sm-fill">
+                <button onclick="hideDiv('Langauge')" class="back_button" id="Langauge_btn"><p class="span_button"><img src="images/giphy.gif" style="width: 6rem; height: 4rem;"><p style="color: #e61251;">RETURN</p></button>
             </div>
-
-            <div class="bar_position" style="--top_position: 19rem;--right_position:31rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">SQL - 8/10</p>
-                <div id="bar_border" style="--percent: 80%"><div class="bar_fill"></div></div> 
+            <div class="d-flex flex-fill">
+                <div class="d-flex flex-column bd-highlight mb-3" style="background-color: #4e4e50">
+                    <h1 class="d-flex justify-content-center" style="color: #e61251;  font-size: 4.2rem;">PROGRAMMING EXPEREINCES</h1>
+                </div>
             </div>
-
-            <div class="bar_position" style="--top_position: 19rem;--right_position:61rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">Python - 8/10</p>
-                <div id="bar_border" style="--percent: 80%" ><div class="bar_fill"></div></div>
-            </div>
-
-            <div class="bar_position" style="--top_position: 29rem;--right_position:81rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading"> JavaScript - 7/10</p>
-                <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
-            </div> 
-
-            <div class="bar_position" style="--top_position: 29rem;--right_position:46rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">C++ - 7/10</p>
-                <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
-            </div>
-
-            <div class="bar_position" style="--top_position: 29rem;--right_position:11rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">Java - 7/10</p>
-                <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
-            </div>
-
-            <div class="bar_position" style="--top_position: 39rem;--right_position:46rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">Delphi - 6/10</p>
-                <div id="bar_border" style="--percent: 60%"><div class="bar_fill"></div></div>
-            </div>
-
-            <div class="bar_position" style="--top_position: 49rem;--right_position:31rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">HTML - 5/10</p>
-                <div id="bar_border" style="--percent: 50%"><div class="bar_fill"></div></div>
-            </div>
-
-            <div class="bar_position" style="--top_position: 49rem;--right_position:61rem;--bar_width:25rem;--bar_height:3rem;">
-                <p class="bar_heading">CSS - 5/10</p>
-                <div id="bar_border" style="--percent: 50%"><div class="bar_fill"></div></div>
-            </div> 
         </div>
+
+        <section class="d-flex flex-column" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+            <h2 class="d-flex justify-content-center" style="font-size: 2.5rem;">LANGAUGE EXPERIENCE</h2>
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>C#</h4>
+                        <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>SQL</h4>
+                        <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>Python</h4>
+                        <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-around">
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>JavaScript</h4>
+                        <div id="bar_border" style="--percent: 70%;"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>HTML</h4>
+                        <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>CSS</h4>
+                        <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="d-flex flex-wrap justify-content-around">
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>C++</h4>
+                        <div id="bar_border" style="--percent: 60%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>Java</h4>
+                        <div id="bar_border" style="--percent: 60%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>Delphi</h4>
+                        <div id="bar_border" style="--percent: 60%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+
+        <div style="background-color: #4e4e50; height: 1.5rem;"></div>
+
+        <section class="d-flex flex-column" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+            <h2 class="d-flex justify-content-center" style="font-size: 2.5rem;">SOFTWARE EXPERIENCE</h2>
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>VISUAL STUDIO 2019</h4>
+                        <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>VS CODE</h4>
+                        <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>WINDOWS 10</h4>
+                        <div id="bar_border" style="--percent: 90%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>GITHUB</h4>
+                        <div id="bar_border" style="--percent: 80%;"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>MYSQL</h4>
+                        <div id="bar_border" style="--percent: 70%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>MS SQL SERVER</h4>
+                        <div id="bar_border" style="--percent: 60%;"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>BLUEJ</h4>
+                        <div id="bar_border" style="--percent: 60%;"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="d-flex flex-wrap justify-content-around">
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>LINUX UBUNTU</h4>
+                        <div id="bar_border" style="--percent: 40%;"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+
+                <div class="align-self-start" style="padding: 2rem; width: 30rem;">
+                    <section>
+                        <h4>LINUX RASPBIAN</h4>
+                        <div id="bar_border" style="--percent: 40%;"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+            <!-- <div class="d-flex flex-wrap justify-content-around" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+                <div class="align-self-start" style="padding-inline: 3rem; width: 20rem;">
+                    <section>
+                        <h4></h4>
+                        <div id="var_border" style="--percent: 100%"><div class="bar_fill"></div></div>
+                    </section>
+                </div>
+            </div> -->
     </div>
 
-    <!-- References -->
     <div id="References" class="hide_section" style="visibility: hidden;">
-        <button onclick="hideDiv('References')" class="back_button" id="References_btn"><p class="span_button">Home page</p></button>
-        References
-        <div class="paragraph" style="--height: 47rem">
-            <div style="float: left;" class="reference_div">
-                <p>
-                    <img src="./Sune.jpg" class="reference">
-                </p>
-                <p class="reference_text">Name: Dr. Sune van der Linde</p>
-                <p class="reference_text">Job title: Lecturer</p>
-                <p class="reference_text">Email info:  
-                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Sune.vanderlinde@nwu.ac.za')">Sune.vanderlinde@nwu.ac.za</a>
-                </p>
-                <p class="reference_text">Cell info: +27 16 910 3258</p>
-                <p class="reference_text">Modules:</p>
-                <p class="reference_text">User Interface Programming</p>
-                <p class="reference_text">Apps and Advanced User Interface Programming</p>
+        <div class="d-flex">
+            <div class="flex-sm-fill">
+                <button onclick="hideDiv('References')" class="back_button" id="References_btn"><img src="images/giphy.gif" style="width: 6rem; height: 4rem;"><p style="color: #e61251;">RETURN</p></button>
             </div>
 
-            <div style="float: right;" class="reference_div">
-                <p>
-                    <img src="./Zeeman.jpg" class="reference">
+            <div class="d-flex flex-fill">
+                <div class="d-flex flex-column bd-highlight mb-3" style="background-color: #4e4e50">
+                    <h1 class="d-flex justify-content-center" style="color: #e61251; font-size: 4.2rem;">REFERENCES</h1>
+                </div>
+            </div>
+        </div>
+         
+        <div class="d-flex flex-wrap justify-content-around" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+            <section>
+                <p class="reference_text">Dr. Sune van der Linde</p>
+                <img src="./images/Sune.jpg">
+                <p class="reference_text">NWU Vaal Acting deputy director, Senior Lecturer</p>
+                    <p class="reference_text">Email:  
+                        <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Sune.vanderlinde@nwu.ac.za')" style="color: #e61251;">Sune.vanderlinde@nwu.ac.za</a>
+                    </p>
+                    <p class="reference_text">Cell: +27 16 910 3258</p>
+                    <p class="reference_text">User Interface Programming</p>
+                    <p class="reference_text">Apps and Advanced User Interface Programming</p>  
+            </section>
+            
+            <section>
+                <p class="reference_text">Ms Malie Zeeman</p>
+                <img src="./images/Zeeman.jpg">
+                <p class="reference_text">Lecturer</p>
+                <p class="reference_text">Email:  
+                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Malie.Zeeman@nwu.acs.za')" style="color: #e61251;">Malie.Zeeman@nwu.ac.za</a>
                 </p>
-                <p class="reference_text">Name: Ms Malie Zeeman</p>
-                <p class="reference_text">Job title: Lecturer</p>
-                <p class="reference_text">Email info:  
-                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Malie.Zeeman@nwu.acs.za')">Malie.Zeeman@nwu.ac.za</a>
-                </p>
-                <p class="reference_text">Cell info: +27 16 910 3266</p>
-                <p class="reference_text">Modules:</p>
+                <p class="reference_text">Cell: +27 16 910 3266</p>
                 <p class="reference_text">Structured Programming</p>
                 <p class="reference_text">Object Oriented Programming</p>
-            </div>  
+            </section>
 
-            <div class="reference_div">
-                <p>
-                    <img src="./Luke.jpg" class="reference">
-                </p>
-                <p class="reference_text">Name: Mr Luke Coetzee</p>
-                <p class="reference_text">Job title: Assitant lecturer</p>
+            <section>
+                <p class="reference_text">Mr Luke Coetzee</p>
+                <img src="./images/Luke_2.jpg">
+                <p class="reference_text">Junior lecturer</p>
                 <p class="reference_text">Email info:  
-                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Luke.Coetzee@nwu.ac.za')">Luke.Coetzee@nwu.ac.za</a>
+                    <a href="#References" onclick="open_new_window('mail.google.com/mail/?view=cm&fs=1&tf=1&to=Luke.Coetzee@nwu.ac.za')" style="color: #e61251;">Luke.Coetzee@nwu.ac.za</a>
                 </p>
                 <p class="reference_text">Cell info: +27 82 469 6996</p>
-                <p class="reference_text">Modules:</p>
-                <p class="reference_text">User Interface Programming</p>
-            </div>
+                <p class="reference_text">Structured Programming</p>
+                <p class="reference_text">Object Oriented Programming</p>
+            </section>
         </div>
     </div>
 
-    <!-- Links(API) -->
-    <div id="Links" class="hide_section" style="visibility: hidden;">
-        <!-- <div id="loader"></div> -->
-        <button onclick="hideDiv('Links')" class="back_button" id="Links_btn"><p class="span_button">Home page</p></button>
-        Interest
-        <div style="padding-top: 2rem;">
-            <div id="SpaceX" style="float: inline-start; margin-right: 11rem; margin-left: 5rem; width: 50rem; padding: 0rem;" class="api_information"></div>
-            <div id="Steam" style="float: inline-start; width: 50rem;" class="api_information"></div>
-        </div>
-        <div id="Github" style="float: inline-start; margin-right: 13rem; margin-left: 5rem; width: 50rem; margin-top: 4rem; padding-left: 0.1rem;" class="api_information"></div>
-    </div> 
-
-    <!-- Download-->
     <div id="Downloads" class="hide_section" style="visibility: hidden;">
-        <button onclick="hideDiv('Downloads')" class="back_button" id="Downloads_btn"><p class="span_button">Home page</p></button>
-        Downloads
-        <div class="paragraph" style="--height:30rem">
-
-            <div  class="download_div" style="float: left;">
-                <a href="#" onclick="window.open('./Franco_Bester_CV.pdf'); return false;">
-                    <img src="./CV.png" class="download_img">
-                </a>
+        <div class="d-flex">
+            <div class="flex-sm-fill">
+                <button onclick="hideDiv('Downloads')" class="back_button" id="Downloads_btn"><p class="span_button"><img src="images/giphy.gif" style="width: 6rem; height: 4rem;"><p style="color: #e61251;">RETURN</p></button>
             </div>
 
-            <div class="download_div" style="float: right;">
-                <a href="#" onclick="window.open('./Franco_Bester_SI_diploma.pdf'); return false;">
-                    <img src="./SI.png" class="download_img">
-                </a>
-            </div>
-
-            <div class="download_div">
-                <a href="#" onclick="window.open('./Franco_Bester_Matric_diploma.pdf'); return false;">
-                    <img src="./Diploma.png" class="download_img">
-                </a>
+            <div class="d-flex flex-fill">
+                <div class="d-flex flex-column bd-highlight mb-3" style="background-color: #4e4e50">
+                    <h1 class="d-flex justify-content-center" style="color: #e61251; font-size: 4.2rem;">DOCUMENTS</h1>
+                </div>
             </div>
         </div>
+        <div class="d-flex flex-wrap justify-content-center" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+            <section style="padding-inline: 1rem; padding-top: 2rem; padding-bottom: 2rem;">
+                <a href="#" onclick="window.open('./pdf/Franco_Bester_CV.pdf'); return false;">
+                    <img src="./images/CV.png" class="download_image">
+                </a>
+            </section>
+
+            <section style="padding-inline: 1rem; padding-top: 2rem; padding-bottom: 2rem;">
+                <a href="#" onclick="window.open('./pdf/Franco_Bester_Degree.pdf'); return false;">
+                    <img src="./images/g_degree.jpg" class="download_image">
+                </a>
+            </section>
+
+            <section style="padding-inline: 1rem; padding-top: 2rem; padding-bottom: 2rem;">
+                <a href="#" onclick="window.open('./pdf/Franco_Bester_Diploma.pdf'); return false;">
+                    <img src="./images/g_diploma.jpg" class="download_image">
+                </a>
+            </section>
+
+            <section style="padding-inline: 1rem; padding-top: 2rem; padding-bottom: 2rem;">
+                <a href="#" onclick="window.open('./pdf/Franco_Bester_Si.pdf'); return false;">
+                    <img src="./images/g_si.jpg" class="download_image">
+                </a>
+            </section>
+        </div>
     </div>
-        
-    <script src="main.js"></script>
+
+    <div id="Links" class="hide_section" style="visibility: hidden;">
+        <div class="d-flex">
+            <div class="flex-sm-fill">
+                <button onclick="hideDiv('Links')" class="back_button" id="Links_btn"><p class="span_button"><img src="images/giphy.gif" style="width: 6rem; height: 4rem;"><p style="color: #e61251;">RETURN</p></button>
+            </div>
+
+            <div class="d-flex flex-fill">
+                <div class="d-flex flex-column bd-highlight mb-3" style="background-color: #4e4e50;">
+                    <h1 class="d-flex justify-content-center" style="color: #e61251; font-size: 4.2rem;">INTERESTS</h1>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d;">
+            <section class="d.flex" style="max-width: 80%;">
+                <h4 class="d-flex justify-content-center">FAVOURITE YOUTUBE CHANNELS</h4>
+                <div id="youtube" class="api_section"></div>
+            </section>
+            
+            <section style="background-color: #4e4e50;">
+                <h4 class="d-flex justify-content-center">GITHUB INFORMATION</h4>
+                <div id="github" class="api_section"></div>
+            </section>
+        </div>
+    </div>
+
+    <div id="touch_controls" class="hide_pads" style="visibility: hidden;" >
+        <div class="d-flex justify-content-center">
+            <section style="padding: 2rem;">
+                <div id=enter_pad class="enter_pad" ></div>
+            </section>
+
+            <section style="padding: 2rem;">
+                <div id=rotation_pad class="rotation_pad" ></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./js/API.js"></script>
+    
 </body>
 </html>
-
