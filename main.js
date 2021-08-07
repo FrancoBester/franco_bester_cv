@@ -3,7 +3,7 @@ var scene,camera,renderer,controls //objects used to do 3d model
 var camera_positions = [[7.989,0.366,-0.18],[-0.002,0.514,7.982],[0.000,5.880,-0.00000],[-0.738,0.1437,-7.964],[-7.824,-0.152,-1.657],[0.000,-7.994,0.00000]]//x/y/z camera postions for each side of the sqaure 
 
 var used_cube = false//used to check if user used to 3D cube to navigate or het nav bar
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);//check if site is on mobile or pc
+var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent);//check if site is on mobile or pc
 var past_div = null//used to get the name of the past div that the user viewed, sets to null when user has not viewed any div
 
 init();//initiate the 3D model
