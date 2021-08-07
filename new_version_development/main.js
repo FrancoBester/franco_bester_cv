@@ -1,4 +1,4 @@
-var scene,camera,mesh,renderer,controls //objects used to do 3d model
+var scene,camera,renderer,controls //objects used to do 3d model
 
 var camera_positions = [[7.989,0.366,-0.18],[-0.002,0.514,7.982],[0.000,5.880,-0.00000],[-0.738,0.1437,-7.964],[-7.824,-0.152,-1.657],[0.000,-7.994,0.00000]]//x/y/z camera postions for each side of the sqaure 
 
@@ -82,13 +82,6 @@ function init(){
     scene.background = texture
     var geometry = new THREE.SphereGeometry( 500, 60, 40 );
     geometry.scale(1,1,1);
-    var material = new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load('/1.jpg')
-    });
-
-    mesh = new THREE.Mesh(geometry, material)
-    scene.add(mesh)
-
 
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 200);
     set_camera(7.989,0.366,-0.18)//set the camera position to the front of the 3D cube
