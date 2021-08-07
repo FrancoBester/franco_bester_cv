@@ -4,6 +4,10 @@ var camera_positions = [[7.989,0.366,-0.18],[-0.002,0.514,7.982],[0.000,5.880,-0
 
 var used_cube = false//used to check if user used to 3D cube to navigate or het nav bar
 var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent);//check if site is on mobile or pc
+var isSamsung = navigator.userAgent.match(/SamsungBrowser/i)
+if (isSamsung){
+    isMobile = true
+}
 var past_div = null//used to get the name of the past div that the user viewed, sets to null when user has not viewed any div
 
 init();//initiate the 3D model
