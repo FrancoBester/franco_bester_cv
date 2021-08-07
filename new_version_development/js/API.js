@@ -1,11 +1,12 @@
 const channels = ["linustechtips","comicstorian","hardwarecanucks","techquickie","motogp","engineeringexplained","crunchyroll","randomfrankp"]
 load_youtube()
 load_github()
+
 async function load_github(){
     let git_url = "https://api.github.com/users/FrancoBester"
     const git_repsonse = await fetch(git_url)
     const git_data = await git_repsonse.json()
-    load_gitdata_html(git_data)
+    load_gitdata_html(git_data) 
 }
 
 function load_gitdata_html(githubdata){
@@ -37,10 +38,10 @@ async function get_channel_image(youtube_url){
 function load_youtube_html(channel_info){
     let original_html = document.getElementById("youtube")
     let youtube_link = "www.youtube.com/"+(channel_info.title).replaceAll(" ","")
-    // console.log(youtube_link)
     original_html.innerHTML += `<a href=#Links onclick=open_new_window("${youtube_link}")><img src="${channel_info.thumbnails.high.url}" class='youtube_coin'> </a>`
 }
-
+    
 function open_new_window(URL){//function used to open other webpages in a new browser window
     window.open("https://"+URL);
 };
+

@@ -103,7 +103,7 @@ function init(){
 
     //used to load custom 3D object
     var loader = new THREE.GLTFLoader();
-    loader.load(`./3d/model/rubiks.glb`,
+    loader.load(`./3d/model/rubiks_text.glb`,
         function (gltf){
             scene.add(gltf.scene);
         },
@@ -215,7 +215,6 @@ function zoomOut(elementID,previous_camera_pos){//function used to zoom out of 3
 function showDiv(elementID){// function used to remove a DIV html tag from the html file
     render_setSize(0,0);//hide scene
     var element = document.getElementById(elementID);
-
     if((past_div != elementID) && (past_div != null)){ //if statement is used to hide previous div when a user navigated using the nav bar
         prev_element = document.getElementById(past_div);
         prev_element.classList.remove("heading");
@@ -233,6 +232,9 @@ function showDiv(elementID){// function used to remove a DIV html tag from the h
     element.classList.remove("hide_section");//used to remove class styles
     element.style.visibility = "visible";//changes div visiblity to allow user to see it
     element.classList.add("heading"); //used to add a new class style
+    element.style.animationName="fade_in";
+    element.style.animationDuration = "2s";
+    element.style.animationTimingFunction="linear";
     if(elementID == "Langauge"){//checks if the current div is the langauge dic
         var bar_elements = document.getElementsByClassName("bar_fill")//gets all the elements with the class of 'bar_fill'
         for(var i=0; i<bar_elements.length ;i++){//adds animation and width to each of the elements in bar_elements

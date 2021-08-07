@@ -29,13 +29,11 @@
     <script src="./js/GLTFLoader.js"></script>
     <script  src="./js/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="./js/API.js"></script>
   
     <div id="About" class="hide_section" style="visibility: hidden;">
         <div class="d-flex">
             <div class="flex-sm-fill">
                 <button onclick="hideDiv('About')" class="back_button" id="About_btn"><img src="images/giphy.gif" style="width: 6rem; height: 4rem; justify-content: center;"><p style="color: #e61251;">RETURN</p></button>
-        
             </div>
 
             <div class="d-flex flex-fill">
@@ -99,7 +97,15 @@
             </div>   
         </div>
         <section class="d-flex flex-row">
-            <img src="./images/g_si.jpg" class="si_image">
+            <section>
+                <img src="./images/g_si.jpg" class="si_image">
+                <section style="padding-top: 0.95rem;">
+                    <h2 class="social_accounts"><a href="#Experience" onclick="open_new_window('www.linkedin.com/in/franco-bester-bb0992207/')" style="color: #e61251;">LINKEDIN</a></h2>
+                    <h2 class="social_accounts"><a href="#Experience" onclick="open_new_window('www.careers24.com/Candidate/Profile')" style="color: #e61251;">CAREERS24</a></h2>
+                    <h2 class="social_accounts"><a href="#Experience" onclick="open_new_window('github.com/FrancoBester')" style="color: #e61251;">GITHUB</a></h2>
+                </section>
+            </section>
+            
             <section class="d-flex flex-column bd-highlight mb-3" style="color: rgba(255, 255, 255, 0.897); background-color: #1a1a1d; padding-top: 2rem;padding-left: 2rem; padding-right: 2rem;">
                 <p class="experience_text">For the past few years I have been working a the North-West University Vaal campus in Vanderbijlpark (
                     <a href="#Experience" onclick="open_new_window('www.nwu.ac.za/welcome')" style="color: #e61251;">NWU</a> ).
@@ -123,7 +129,6 @@
                 </p>
             </section>
         </section>
-        </div>
     </div>
 
     <div id="Langauge" class="hide_section" style="visibility: hidden;">
@@ -301,7 +306,6 @@
                     </section>
                 </div>
             </div> -->
-        </div>
     </div>
 
     <div id="References" class="hide_section" style="visibility: hidden;">
@@ -429,12 +433,11 @@
             <section style="padding: 2rem;">
                 <div id=rotation_pad class="rotation_pad" ></div>
             </section>
-            
-            
         </div>
     </div>
-    <script src="./main.js"></script>
-    
 
+    <script src="./main.js"></script>
+    <script src="./js/API.js"></script>
+    
 </body>
 </html>

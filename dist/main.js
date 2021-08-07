@@ -431,6 +431,7 @@ function hideDiv(elementID){//method used to hide html and show the cube
     
     if(document.getElementById(elementID+"_btn").disabled == false && used_cube == true){
         element.classList.add("hide_section");//adds class to div to hide div from user
+        console.log(element.style.animationName)
         document.getElementById(elementID+"_btn").disabled = true;//disbales the back button to stop user from pressing multiple times
         zoomOut(element,previous_side);//class xoomout animation for 3D object
         used_cube = false;//changes used_cube to check if user useses the cube the next time

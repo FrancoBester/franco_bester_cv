@@ -1,6 +1,7 @@
 /* #region Standard_Tags */
-html, body { 
-    margin: 0; 
+
+body { 
+    margin: 0rem; 
     width: 100%;
     padding: 0rem;
     height: 100%;
@@ -21,6 +22,9 @@ h4{
 .hide_section{
     /* used to make div on page not take space on page when other div is being shown */
     position: absolute; 
+    animation-name: fade_out;
+    animation-duration: 3s;
+    animation-timing-function: linear;
     height: -100px;
     width: -100px;
 }
@@ -133,7 +137,7 @@ h4{
 /* #region Experience_Page */
 .experience_text{
     padding-bottom: 0.95rem;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 .si_image{
@@ -142,6 +146,12 @@ h4{
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
+}
+
+.social_accounts{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2.3rem;
 }
 /* #endregion Experience_Page */
 
