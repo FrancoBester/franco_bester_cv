@@ -1,9 +1,9 @@
 /* #region Standard_Tags */
-@media only screen and (orientation:portrait){
+/* @media only screen and (orientation:portrait){
     body{
         transform: rotate(90deg);
     }
-}
+} */
 body { 
     margin: 0rem; 
     width: 100%;
