@@ -253,8 +253,8 @@ h4{
 .rotation_pad{
     background-image: url(test.png);
     background-size: 100%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border: 3px solid rgba(218, 225, 230, 0.25);
     border-radius: 90px;
     box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
@@ -264,8 +264,8 @@ h4{
 .enter_pad{
     background-image: url(enter_2.png);
     background-size: 100%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border: 2px solid rgba(218, 225, 230, 0.25);
     border-radius: 50px;
     box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
