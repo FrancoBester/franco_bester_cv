@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="images/logo.jpg">
+    <title>Cormed Vanderbijlpark Private Hospital</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ontouchstart="">
+
+    <div class="logo">
+        <img class="" src="images/logo.jpg">
+    </div>
+    
+    <!--  navigation panel -->
+    <div id="navigationPanel"></div>
+
+    <div class="d-flex" style="overflow: hidden;">
+        <img src="images/banner.jpg" id= "banner" class="banner"/>
+    </div>
+
+    <div style="padding: 0.2rem;"></div>
+
+    <div id="Main" class="container">
+
+        <div onclick="showDiv('room')" class="imageContainer" id="room">
+            <section></section>
+            <div class="textOverlay">
+                <h2>Your Hospital Room</h2>
+                <p>Our nursing staff will make you as confortable as possible and you will have the opportunity to ask questions during your nursing admission.</p>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div onclick="showDiv('valuables')" class="imageContainer" id="valuables">
+            <section></section>
+            <div class="textOverlay">
+                <h2>Valuables</h2>
+                <p>We strongly recommend that you leave all your valuables at home. Cormed Clinic does not take any resposibility for the loss of valuables.</p>
+                <p>You will only need essentials such as toiletries and sleepwear in your room.</p>   
+                <a class="fakeLink">Additional Information</a> 
+            </div>
+        </div>
+
+        <div onclick="showDiv('meals')" class="imageContainer" id="meals">
+            <section></section>
+            <div class="textOverlay">
+                <h2>Meals</h2>
+                <p>Our in-house Food Service Departemnt will take care of all of your dietary needs during your stay.</p>
+                <p>You will receive 3 meals daily.</p> 
+                <a class="fakeLink">Additional Information</a> 
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div onclick="showDiv('whatToBring')" class="imageContainer" id="wtb">
+            <section></section>
+            <div class="textOverlay">
+                <h2>What To Bring</h2>
+                <p>On the day of admission, make sure you have the following with you:
+                    <ul>
+                        <li>Identification</li>
+                        <li>Personals</li>
+                        <li>Assistive Devices</li>
+                        <li>Medical Information</li>
+                    </ul>
+                </p>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div onclick="showDiv('discharge')" class="imageContainer" id="discharge">
+            <section></section>
+            <div class="textOverlay">
+                <h2>Discharge</h2>
+                <p>Your health care team will work closely with you to make sure that you have the information and resources you need to ensure a seamless continuation of your care and recovery.</p>
+                <p>Throughout your stay various members of your health care team will discuss your discharge instructions with you.</p>  
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div onclick="showDiv('Feedback')" class="imageContainer" id="feedback">
+            <section></section>
+            <div class="textOverlay">
+                <h2>Feedback</h2>
+                <p>Cormed Clinic is committed to the highest quality standards. If you have any concerns, we kindly ask you to inform the nursing staff or the doctors.</p>
+                <p>Your valuables input will help us to improve our service and facilities.</p>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+    </div>
+    <script src="./mobile.js"></script>
+    <script src="./main.js"></script>
+   
+</body>
+</html>

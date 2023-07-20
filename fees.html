@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="img/png" href="images/logo.jpg">
+    <title>Cormed Vanderbijlpark Private Hospital</title>
+    
+</head>
+<body>
+
+    <div class="logo">
+        <img src="images/logo.jpg">
+    </div>
+
+    <!--  navigation panel -->
+    <div id="navigationPanel"></div>
+
+    <div class="d-flex" style="overflow: hidden;">
+        <img src="images/banner.jpg" id= "banner" class="banner"/>
+    </div>
+
+    <div style="padding: 0.2rem;"></div>
+
+    <div id="Main" class="containerColumnFees" style="flex-direction: row;">
+
+        <nav class="sideNav">
+            <h3>Medical Aid</h3>
+            <ul>
+                <li id="medGeneralLink" onclick="showSection('medGeneral')">General Ward Admissions</li>
+                <li id="medCasualtiesLink" onclick="showSection('medCasualties')">Casualties</li>
+                <li id="medICULink" onclick="showSection('medICU')">ICU/Highcare Admissions</li>
+                <li id="medMaternityLink" onclick="showSection('medMaternity')">Maternity Ward</li>
+            </ul>
+    
+            <h3>Non-Medical Aid</h3>
+            <ul>
+                
+                <li id="nonGeneralLink" onclick="showSection('nonGeneral')">General Ward Admissions</li>
+                <li id="nonCasualtiesLink" onclick="showSection('nonCasualties')">Casualties</li>
+                <li id="nonICULink" onclick="showSection('nonICU')">ICU/Highcare Admissions</li>
+                <li id="nonMaternityLink" onclick="showSection('nonMaternity')">Maternity Ward</li>
+            </ul>
+        </nav>
+
+        <!-- Medical patients -->
+
+        <div id="medGeneral" class="hideSection"> 
+            <h1>Medical Aid</h1>
+            <h2>General Ward Admissions</h2>
+            <div>Please refer to your medical aid Benefits & Rules</div>
+        </div>
+
+        <div id="medCasualties" class="hideSection">
+            <h1>Medical Aid</h1>
+            <h2>Casualties </h2>
+            <div class="feeSection">
+                <h3>Admin Fess</h3>
+                <h4>Mon-Fri(08:00:17:00) - R150.00</h4>
+                <h4>Weekdays after 17:00/Weekends/Public holidays - R300.00</h4>
+                <p>Not refundable by medical aid</p>
+                <p>Not applicable for lacerations & procedures</p>
+            </div>
+
+            <div class="feeSection"> 
+                <h3>Doctor Fees</h3>
+                <h4>To be paid by Medical Aid</h4>
+                <p>Unless benefit is depleted. Then Non-Medical patient feed payable</p>
+            </div>
+
+            <div class="feeSection"> 
+                <h3>Hospital Costs</h3>
+                <h4>To be paid by Medical Aid</h4>
+                <p>Unless Benefits are depleted. Then Non-Medical patient feed payable</p>
+            </div>
+        </div>
+
+        <div id="medICU" class="hideSection">
+            <h1>Medical Aid</h1> 
+            <h2>ICU / HighCare Admissions</h2>
+            <div>Please refer to your medical aid Benefits & Rules</div>
+        </div>
+
+        <div id="medMaternity" class="hideSection"> 
+            <h1>Medical Aid</h1>
+            <h2>Maternity Ward</h2>
+            <div>Please refer to your medical aid Benefits
+                <p>Free baby registration</p>
+            </div>
+        </div>
+
+
+
+        <!-- Non medical patients -->
+
+        <div id="nonGeneral" class="hideSection">
+            <h1>Non-Medical Aid</h1>
+            <h2>General Ward Admissions</h2>
+            <div class="feeSection">
+                <h3>Hospital Deposit</h3>
+                <div>R12,000.00</div>
+
+                <h4>Excluding:</h4>
+                <ul>
+                    <li>Doctors Fees</li>
+                    <li>Lab Tests</li>
+                    <li>X-Rays</li>
+                    <li>Scans</li>
+                    <li>Any other additional services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="nonCasualties" class="hideSection"> 
+            <h1>Non-Medical Aid</h1>
+            <h2>Casualties</h2>
+            <div class="feeSection">
+                <h3>Admin Fees</h3>
+                <h4>Mon-Fri(08:00:17:00) - R150.00</h4>
+                <h4>Weekdays after 17:00/Weekends/Public holidays - R300.00</h4>
+            </div>
+
+            <div class="feeSection">
+                <h3>Doctors Fees</h3>
+                <h4>R650.00</h4>
+                <h4>R800.00 for procedures/lacerations</h4>
+            </div>
+
+            <div class="feeSection">
+                <h3>Hospital Costs</h3>
+                <h4>Procedures/Lacerations
+                    <p>Deposit: R950.00</p>
+                </h4>
+                <p>Patient is responsible for any outstanding amounts for medication/consumables</p>
+            </div>
+        </div>
+
+        <div id="nonICU" class="hideSection">
+            <h1>Non-Medical Aid</h1>
+            <h2>ICU / HighCare Admissions</h2>
+            <div class="feeSection">
+                <h3>Please Contact Mev. T. Erasmus <a href="tel:0169188080" class="hyperlink">016 981 8080</a> for a quotation and deposit arrangements</h3>
+            </div>
+        </div>
+
+        <div id="nonMaternity" class="hideSection">
+            <h1>Non-Medical Aid</h1>
+            <h2>Maternity Ward</h2>
+            <div class="feeSection">
+                <h3>Normal Deliveries</h3>
+                <div>
+                    <h4>Doctors Fees</h4>
+                    <p>Payable at Doctor rooms</p>
+                </div>
+
+                <div> 
+                    <h4>Hospital Costs</h4>
+                    <p>R15,600.00</p>
+                    <p>2 Nights included</p>
+                    <p>Free baby registration</p>
+                </div>
+            </div>
+
+            <div class="feeSection">
+                <h3>Caesarean Sections</h3>
+                <div>
+                    <h4>Doctors Fees</h4>
+                    <p>Doctors Fees payable at Doctors rooms</p>
+                </div>
+
+                <div> 
+                    <h4>Hospital Costs</h4>
+                    <p>R23,400.00</p>
+                    <p>2 nights included</p>
+                    <p>Free baby registration</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
