@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="img/png" href="images/logo.jpg">
+    <title>Cormed Vanderbijlpark Private Hospital</title>
+</head>
+<body>
+
+    <div class="logo">
+        <img class="" src="images/logo.jpg">
+    </div>
+
+    <!--  navigation panel -->
+    <div id="navigationPanel"></div>
+
+    <div class="d-flex" style="overflow: hidden;">
+        <img src="images/banner.jpg" id= "banner" class="banner"/>
+    </div>
+
+   <div style="padding: 0.2rem;"></div>
+
+
+    <div id="Main" class="container">
+
+        <div onclick="showDiv('generalWard')" class="imageContainer" id="generalWard">
+            <img src="images/generalWard.jpg">
+            <div class="textOverlay">
+                <h2>General Ward(Medical & Surgical)</h2>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div onclick="showDiv('OR')" class="imageContainer" id="theatre">
+            <img src="images/theatre1.jpg">
+            <div class="textOverlay">
+                <h2>Operating Theatre</h2>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div onclick="showDiv('Casualty')" class="imageContainer" id="casualty">
+            <img src="images/casualty.jpg">
+            <div class="textOverlay">
+                <h2>Casualty</h2>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div onclick="showDiv('ICU')" class="imageContainer" id="icu">
+            <img src="images/highcare.jpg">
+            <div class="textOverlay">
+                <h2>ICU & Highcare</h2>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div onclick="showDiv('MaternityWard')" class="imageContainer" id="maternity">
+            <img src="images/maternity.jpg">
+            <div class="textOverlay">
+                <h2>Maternity Ward</h2>
+                <a class="fakeLink">Additional Information</a>
+            </div>
+        </div>
+
+        <div class="imageContainer" id="cafe">
+            <img src="images/cafe.jpg">
+            <div class="textOverlay">
+                <h2>TJ Roots/Cor Cafe</h2>
+                <h4>Operating Hours</h4>
+
+                <p>Monday - Friday
+                    <p>07:00 - 20:00</p>
+                </p>
+
+                <p>Weekends/Public Holidays
+                    <p>09:00 - 17:00</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="imageContainer" id="ar">
+            <img src="images/ar.jpg">
+            <div class="textOverlay">
+                <h2>AR Diagnostics</h2>
+                <h4>Operating Hours</h4>
+
+                <p>Monday - Friday
+                    <p>08:00 - 17:00</p>
+                </p>
+
+                <p>Saterday
+                    <p>08:00 - 12:00</p>
+                </p>
+
+                <p>After Hours Fee - R200.00</p>
+            </div>
+        </div>
+
+        <div class="imageContainer" id="local">
+            <img src="images/localChoice.JPG">
+            <div class="textOverlay">
+                <h2>Pharamacy-The Local Choice</h2>
+                <h4>Operating Hours</h4>
+
+                <p>Monday - Friday/Saterday
+                    <p>08:00 - 19:00/13:00</p>
+                </p>
+
+                <p>Sondays/Public Holidays
+                    <p>10:00 - 13:00</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./mobile1.js"></script>
+</body>
+</html>

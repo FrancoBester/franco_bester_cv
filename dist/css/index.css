@@ -1,10 +1,12 @@
-/* #region Standard_Tags */
+/* Standard_Tags */
 
 body { 
     margin: 0rem; 
     width: 100%;
     padding: 0rem;
     height: 100%;
+    font-family: 'Georgia', serif;
+    background-color: rgb(162,172,171);
 }
 
 h1{
@@ -12,262 +14,632 @@ h1{
 }
 
 h2{
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.6rem;
+}
+
+h3{
+    padding-bottom: 0.4rem;
 }
 
 h4{
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.4rem;
 }
 
-.hide_section{
-    /* used to make div on page not take space on page when other div is being shown */
-    position: absolute; 
-    animation-name: fade_out;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    height: -100px;
-    width: -100px;
+p{
+    font-size: medium;
 }
 
-.heading{
-    animation-name: fade_in;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    height: 45%;
+li{
+    font-size: medium;
 }
 
-.hide_pads{
-    position: absolute;
-    height: -100px;
-    width: -100px;
-    opacity: 0%;
+a:hover{
+    color: rgb(140,226,208);
 }
 
-@keyframes fade_out{
-    0%  {opacity: 1;}
-    10% {opacity: 0.9;}
-    20% {opacity: 0.8;}
-    30% {opacity: 0.7;}
-    40% {opacity: 0.6;}
-    50% {opacity: 0.5;}
-    60% {opacity: 0.4;}
-    70% {opacity: 0.3;}
-    80% {opacity: 0.2;}
-    90% {opacity: 0.1;}
-    100% {opacity: 0;}
-}
-
-@keyframes fade_in{
-    0%  {opacity: 0;}
-    10% {opacity: 0.1;}
-    20% {opacity: 0.2;}
-    30% {opacity: 0.3;}
-    40% {opacity: 0.4;}
-    50% {opacity: 0.5;}
-    60% {opacity: 0.6;}
-    70% {opacity: 0.7;}
-    80% {opacity: 0.8;}
-    90% {opacity: 0.9;}
-    100% {opacity: 1;}
-}
-
-/* #endregion Standard_Tags */
-
-/* #region navigation_bar */
-.topnav {
-    background-color: #1a1a1d;
-    overflow: hidden;
-    width: 100%;
-}
-
-.topnav a {
-    float: left;
-    color: rgba(255, 255, 255, 0.897);
-    text-align: center;
-    padding: 14px 16px;
+a{
+    color: black;
     text-decoration: none;
-    font-size: 17px;
+    /* display: flex; */
+    flex-wrap: wrap;
 }
 
-.topnav a:hover {
-    background-color: #4e4e50;
-    color: #e61251;
+
+/* ######################################################################################### */
+/* standard on all page */
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
 }
 
-.topnav a.active {
-    background-color: #e61251;
-    color: #1a1a1d;
+.logo img{
+    width: 220px;
+    height: 150px;
 }
 
-/* #endregion navigation_bar */
-
-/* #region About_Page */
-.me{
-    width: 450px;
-    height: 550px;
-    padding-top: 2rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-}
-
-.about_text{
-    padding-bottom: 0.95rem;
-    font-size: 1.8rem;
-    /* max-width: 95%; */
-}
-
-.back_button{
-    width: 10rem;
-    height: 7rem;
-    background-color: #4e4e50;
-    border: none;
-    padding: 0.1rem;
-}
-
-.back_button:hover{
-    width: 10rem;
-    height: 7rem;
-    background-color: #1a1a1d;
-    border: none;
-    padding: 0.5rem;
-}
-
-/* #endregion About_Page */
-
-/* #region Experience_Page */
-.experience_text{
-    padding-bottom: 0.95rem;
-    font-size: 1.6rem;
-}
-
-.si_image{
-    width: 500px;
-    height: 750px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2rem;
-}
-
-.social_accounts{
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 2.3rem;
-}
-/* #endregion Experience_Page */
-
-/* #region Reference_Page */
-.reference_text{
-    font-size: 1.9rem;
-    font-family: cursive;
-    padding-right: 0.7rem;
-    padding-bottom: 0.7rem;
-}
-
-.reference_image{
-    /* padding: 0.6rem; */
-    max-width: 15rem;
-    max-height: 20rem;
-}
-/* #endregion Reference_Page */
-
-/* #region Skills_Page */
-.bar_fill{
-    display: block;
-    height: 3rem;
-    background-color: #e61251;
-    width: 0%;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-
-}
-
-#bar_border{
-    border:  0.3rem solid #1a1a1d;
-    background-color: rgba(255, 255, 255, 0.897);
-}
-
-@keyframes bar_load{
-    0%  {width: 0}
-    10% {width: calc(var(--percent)*0.1);}
-    20% {width: calc(var(--percent)*0.2);}
-    30% {width: calc(var(--percent)*0.3);}
-    40% {width: calc(var(--percent)*0.4);}
-    50% {width: calc(var(--percent)*0.5);}
-    60% {width: calc(var(--percent)*0.6);}
-    70% {width: calc(var(--percent)*0.7);}
-    80% {width: calc(var(--percent)*0.8);}
-    90% {width: calc(var(--percent)*0.9);}
-}
-
-@keyframes bar_empty {
-    90%  {width: 0}
-    80% {width: calc(var(--percent)*0.1);}
-    70% {width: calc(var(--percent)*0.2);}
-    60% {width: calc(var(--percent)*0.3);}
-    50% {width: calc(var(--percent)*0.4);}
-    40% {width: calc(var(--percent)*0.5);}
-    30% {width: calc(var(--percent)*0.6);}
-    20% {width: calc(var(--percent)*0.7);}
-    10% {width: calc(var(--percent)*0.8);}
-    0% {width: calc(var(--percent)*0.9);}
-}
-/* #endregion Skills_Page */
-
-/* #region Download_Page */
-.download_image{
-    width: 35rem;
-    height: 50rem;
-}
-/* #endregion Download_Page */
-
-/* #region API */
-.youtube_coin{
-    border-radius: 100%;
-    animation: youtube_coin_spin 8s infinite;
-    animation-timing-function: linear;
-    padding: 0.5rem;
+.banner{
+    width: 100%;
     height: 20rem;
-    width: 20rem;
+    background-size: cover;
+    background-position: center;
 }
 
-@keyframes youtube_coin_spin {
-    100%{transform: rotateY(360deg);}
+.d-flex{
+    background-color: rgb(162,172,171);
 }
 
-.github_text{
-    padding-top: 1rem;
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+    font-size: larger;
+    justify-content: space-evenly;
 }
 
-.api_section{
-    padding-left: 2rem;
+.navlinks{
+    padding-inline: 2rem;
+}
+
+.hyperlink{
+    color: blue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hyperlink:hover{
+    color: blue;
+}
+
+
+/* ######################################################################################### */
+/* Home page */
+.containerHome{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgb(162,172,171);
+}
+
+.itemCard{
+    max-width: 450px;
+    padding: 10px;
+    margin: 5px;
+    font-size: x-large;
+    background-color: rgb(140,226,208);
+
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.contactP{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hourContainer{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px
+}
+
+#map{
+    height: 400px;
+}
+
+
+/* ######################################################################################### */
+/* About page */
+
+.containerColumnAbout{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(140,226,208);
+
+    padding-top: 0.2rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 5rem;
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.containerColumnAbout p{
+    font-size: 110%;
+}
+
+
+/* ######################################################################################### */
+/* Patient Guide & Faciliteis&Services */
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.imageContainer{
+    position: relative;
+    display: inline-flexbox;
+}
+
+.imageContainer section{
+    width: 300px;
+    height: 280px;
+    padding: 1rem;
+    background-color: rgb(140,226,208);
+    margin: 0.5rem;
+
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.imageContainer:hover img{
+    opacity: 0.3;
+}
+
+.imageContainer:hover .textOverlay{
+    color: white;
+    top:50%;
+}
+
+.imageContainer h2{
+    color: white;
+}
+
+.imageContainer a{
+    color: white;
+}
+
+.imageContainer:hover .textOverlay p{
+    visibility: visible;
+}
+
+.imageContainer:hover .textOverlay h4{
+    visibility: visible;
+}
+
+.imageContainer:hover .textOverlay li{
+    visibility: visible;
+}
+
+.imageContainer:hover .textOverlay a{
+    visibility: visible;
+}
+
+.imageContainer img{
+    width: 300px;
+    height: 280px;
+    padding: 1rem;
+}
+
+.textOverlay{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: black;
+    width: 80%;
+}
+
+.textOverlay h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.textOverlay p{
+    visibility: hidden;
+}
+
+.textOverlay h4{
+    visibility: hidden;
+}
+
+.textOverlay li{
+    visibility: hidden;
+}
+
+.textOverlay a{
+    visibility: hidden;
+}
+
+.textOverlay a:hover{
+    color: blue;
+}
+
+.textOverlayMobile{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: black;
+    width: 80%;
+}
+
+.textOverlayMobile p{
+    visibility: visible;
+}
+
+.textOverlayMobile h4{
+    visibility: visible;
+}
+
+.textOverlayMobile li{
+    visibility: visible;
+}
+
+.textOverlayMobile a{
+    visibility: visible;
+    color: blue;
+}
+
+.imageContainerMobile{
+    position: relative;
+    display: inline-flexbox;
+    opacity: 0.3;
+}
+
+/* ######################################################################################### */
+/* Patient guide other pages */
+
+.containerColumnAdditional{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(140,226,208);
+
+    padding-top: 0.2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.containerColumnAdditional h1{
+    margin-bottom: 0.5rem;
+}
+
+.containerColumnAdditional p{
+    font-size: 140%;
+    margin: 1.1rem;
+}
+
+.containerColumnAdditional ul{
+    font-size: 200%;
+    margin: 1.5rem;
+}
+
+.containerColumnAdditional li{
+    font-size: 75%;
+    margin-top: 0.75rem;
+}
+
+
+/* ######################################################################################### */
+/* Fees */
+
+.containerColumnFees{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(140,226,208);
+    margin: 0;
+    padding: 0;
+}
+
+.sideNav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    height: auto; 
+    background-color: rgb(140,226,208);
+    float: left; 
+    
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     padding-right: 2rem;
-    padding-top: 1rem;
-}
-/* #endregion API */
-
-/* #region touch_controls */
-.rotation_pad{
-    background-image: url(test.png);
-    background-size: 100%;
-    width: 150px;
-    height: 150px;
-    border: 3px solid rgba(218, 225, 230, 0.25);
-    border-radius: 90px;
-    box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
-    padding: 2rem;
+    max-height: 400px;
 }
 
-.enter_pad{
-    background-image: url(enter_2.png);
-    background-size: 100%;
-    width: 150px;
-    height: 150px;
-    border: 2px solid rgba(218, 225, 230, 0.25);
-    border-radius: 50px;
-    box-shadow: 0px 0px 5px rgba(194, 200, 204, 0.55);
-    padding: 2rem;
+.sideNav ul{
+    margin-top: 0;
 }
 
-/* #endregion touch_controls */
+.sideNav ul :hover{
+    color: blue;
+}
+
+.linkClick{
+    color: blue;
+}
+
+.sideNav h3{
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+.feeSection{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    align-content: center;
+    max-height: 295px;
+}
+
+.itemFees{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    padding-right: 2rem;
+    max-height: auto;
+    padding: 0.2rem;
+    margin: 5px;
+    text-align: center;
+    width: auto;
+    margin-bottom: 0;
+}
 
 
+/* ################################################################################################################## */
+/* What to bring */
+
+.containerRow{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: start  ;
+    background-color: rgb(140,226,208);
+    
+}
+
+.containerRow ul{
+    max-width: 500px;
+    max-height: none;
+    min-width: none;
+    min-height: none;
+    background-color: rgb(162,172,171);
+    margin: 2rem;
+}
+
+.containerRowWTB{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:  rgb(162,172,171);
+    margin-bottom: 2rem;
+}
+
+
+
+/* ######################################################## */
+/* Discharge */
+
+.containerDischarge{
+    /* white-space: nowrap; */
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.containerDischarge ul{
+    display: flex;
+    flex-wrap: wrap;
+   font-size: larger;
+   font-weight: bold;
+   justify-content: center;
+}
+.containerDischarge p{
+    margin: 0.7rem;
+    /* padding-top: 5px; */
+ }
+
+.dischargeItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin: 5px;
+    padding: 10px; */
+}
+
+.dischargeItem li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dischargeP{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerColumnDischarge{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(140,226,208);
+
+    padding-top: 0.2rem;
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.containerColumnDischarge p{
+    font-size: 110%;
+}
+
+
+/* ############################################################## */
+/* PDF css */
+
+.pdfContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pdfItem{
+    flex: 0 0 25%; /* Each item takes 25% of the container width */
+    padding: 10px;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(140,226,208);
+
+    padding-top: 0.2rem;
+    border: 5px solid rgb(145, 157, 157);
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    /* scale: 0.7;     */
+    
+}
+
+.pdfView{
+    height: 500px;
+    width: 500px;
+
+    /* @media (max-width: 400px) {
+        width:250px
+    } */
+}
+
+/* ############################################################## */
+
+.hideSection{
+    visibility: hidden;
+    height: -100px;
+    width: -100px;
+    position: absolute;
+}
+
+.item{
+    padding: 10px;
+    margin: 5px;
+    font-size: x-large;
+    
+}
+
+.item h1{
+    background-color: rgb(140,226,208);
+    width: 450px;
+}
+
+
+.containerColumn{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(140,226,208);
+}
+
+
+
+.containerColumn h1{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;    
+}
+
+.menu ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background-color: #555;
+}
+
+
+/* <!-- pantone 332 - 140 226 208 -->
+<!-- pantone 442 - 162 172 171-->
+<!-- pantone 443 - 145 157 157 --> */
+
+
+#myElement {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+  }
+ 
